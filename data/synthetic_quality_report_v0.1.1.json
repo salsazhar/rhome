@@ -1,0 +1,34 @@
+{
+  "dataset_version": "0.1.1",
+  "days": 730,
+  "sessions": 495,
+  "sets_total": 10215,
+  "sets_dose_bearing": 7526,
+  "sets_by_type": {
+    "warmup": 2566,
+    "working": 6955,
+    "backoff": 571,
+    "drop": 123
+  },
+  "performance_test_sets": 67,
+  "personal_records": 327,
+  "wearable_missingness": {
+    "none": 95.34,
+    "full": 1.23,
+    "partial": 3.42
+  },
+  "sets_without_effort": 1.95,
+  "days_without_body_mass": 16.58,
+  "body_mass_kg": {
+    "start": 79.999,
+    "end": 82.274,
+    "min": 79.999,
+    "max": 84.7
+  },
+  "capacity_change_pct": {
+    "bench_press": 16.7,
+    "back_squat": 15.8,
+    "deadlift": 29.5,
+    "overhead_press": 22.0
+  }
+}

@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# LaTeX intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Generated data (regenerate from seed; never commit)
+data/synthetic/
+
+# Generated datasets are rebuildable from seed + generation_config.json.
+# Their checksums are committed so a regeneration can be verified.
+!data/synthetic_checksums_*.json
+!data/synthetic_quality_report_*.json
+
+# The athlete's own export. Sealed until L3.10; never committed.
+# Its checksums live in data/real_manifest.json, which is.
+data/real/
+
+# A readable export of the same personal data, derived after the L3.12 cold run
+# discharged the seal (D22). Regenerable from the originals; never committed,
+# for the same reason they are not.
+data/real_export/
+
+# Personal: which gym each session happened in, from the athlete's recollection.
+data/real_gym_tags.json
+
+# The raw phone export, as downloaded. Personal health and app-analytics
+# data; the relevant files are copied into data/real/ and sealed there.
+real_oura/
+spotr_data/
+real_data_checksums.sha256
+
+# iOS logger build artefacts (project.yml is the source of truth)
+app/build/
+app/build-device/
+app/RhomeLogger.xcodeproj/
+app/RhomeLogger/Info.plist
+*.xcuserdatad

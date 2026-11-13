@@ -1,0 +1,30 @@
+{
+  "v0": {
+    "filename": "exercise_library.csv",
+    "sha256": "e5b4670557c8d3df8dcc2a4a3b51042178c8b23d10d1a1a8444279bb837e8c89",
+    "exercises": 27,
+    "bytes": 3946,
+    "note": "the 27-exercise curated library the v0.1.0 synthetic dataset was generated against"
+  },
+  "v1": {
+    "filename": "exercise_library_v1.csv",
+    "sha256": "d1c5ad2a775518dbdf45a59e9f624f6b34637e68f942dfb9437694e3ae540bb5",
+    "exercises": 1074,
+    "bytes": 191918,
+    "note": "athlete-authored, 1074 exercises; integrated at L3.9"
+  },
+  "v1.1": {
+    "filename": "exercise_library_v1_1.csv",
+    "sha256": "9f4df1301989397641ee303961ef03ec14310ae765ca5d16d871643e0de8180c",
+    "exercises": 1074,
+    "bytes": 191015,
+    "note": "v1 with L3.9's kind and bodyweight-fraction resolution: 32 band exercises stated at 0.00, 14 isometric holds reclassified time_only per DATA.md 5.4.1, 11 partial-body-mass exercises given proposed fractions pending athlete review"
+  },
+  "v1.2": {
+    "filename": "exercise_library_v1_2.csv",
+    "sha256": "3fad7de7d0ac323057ef2ff28f777111a309ae8c4f0921cf37a5c2a5f6f77906",
+    "exercises": 1074,
+    "bytes": 191013,
+    "note": "v1.1 with L3.14's athlete-confirmed equipment corrections: straight-bar triceps pressdown is cable and seated calf raise is machine"
+  }
+}

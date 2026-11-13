@@ -1,0 +1,71 @@
+==============================================================================
+REAL-DATA COLD RUN — the athlete's own history
+==============================================================================
+
+provenance : library v1.1 (9f4df1301989), mapping 32c99d2968d2, opened 4 times (1 scoring, 3 dry), first on 2026-08-24
+seal       : opened 4 times (1 scoring, 3 dry), first on 2026-08-24
+reason     : L3.12 real-data cold run: the v0 engine, frozen at commit 0333d20, evaluated once against the athlete's 99 recorded sessions and matching Oura history. Exercise mapping frozen and reviewed at L3.10; library v1.1 pinned at L3.9; all known limitations recorded in build_log/LIMITATIONS.md before the run.
+
+span       : 2024-12-17 to 2026-08-22 (614 days, 99 sessions)
+ingestion  : 614 days, 99 sessions, 976 of 1115 sets kept · 569 wearable nights, 45 days without one · 241 days with no body mass · skipped: deleted 28, exercise added but never performed 110, no repetitions 1
+
+------------------------------------------------------------------------------
+ONE-STEP-AHEAD RESIDUALS  (DATA.md §19.2, the severe criterion)
+------------------------------------------------------------------------------
+  n = 288 scored sets across 31 exercises
+  MAE   0.2682
+  RMSE  0.3956
+  bias  +0.1797
+  lag-1 autocorrelation  +0.0373
+
+------------------------------------------------------------------------------
+ABLATION LADDER  (D20 — no score without its trivial competitor)
+------------------------------------------------------------------------------
+
+  all scored sets  (n=162)
+    engine                 MAE 0.3148  bias +0.2148  reference
+    last observation       MAE 0.1427  bias +0.0013  baseline better  delta -0.17205+/-0.05192
+    median of last 3       MAE 0.1708  bias -0.0172  baseline better  delta -0.14398+/-0.05053
+    median of last 5       MAE 0.1842  bias -0.0427  baseline better  delta -0.13062+/-0.04748
+    mean of last 5         MAE 0.1854  bias -0.0345  baseline better  delta -0.12934+/-0.04516
+
+  20+ prior  (n=21)
+    engine                 MAE 0.3513  bias +0.1095  reference
+    last observation       MAE 0.1333  bias -0.0213  baseline better  delta -0.21802+/-0.11797
+    median of last 3       MAE 0.1591  bias -0.1057  baseline better  delta -0.19220+/-0.12145
+    median of last 5       MAE 0.2293  bias -0.1963  tie  delta -0.12197+/-0.12666
+    mean of last 5         MAE 0.2593  bias -0.2153  tie  delta -0.09197+/-0.10020
+
+------------------------------------------------------------------------------
+BIAS, SLICED  (a pooled zero can be two opposite biases meeting)
+------------------------------------------------------------------------------
+  days  240- 359   n= 113   +0.2257
+  days  360- 479   n= 110   +0.1831
+  days  480- 599   n=  28   +0.1234
+  days  600- 719   n=  37   +0.0718
+
+  observations  0+   n= 203   +0.1615
+  observations 10+   n=  64   +0.2606
+  observations 20+   n=  19   +0.1263
+
+------------------------------------------------------------------------------
+CONFIDENCE  (DATA.md §19.5 — does it fall where evidence is thin?)
+------------------------------------------------------------------------------
+  fatigue confidence bands   {'moderate': 89, 'high': 518, 'limited': 7}
+  binding reason             {'wearable completeness': 389, 'dose quality': 180, 'baseline maturity': 41, 'unexplained autonomic deviation': 4}
+  complete nights 0.9283 vs blank 0.7199 -> +0.2083 on 83 blank nights
+  capacity readings before 20 sessions of an exercise: 5 of 286 say high
+
+------------------------------------------------------------------------------
+NOT REPORTED, DELIBERATELY
+------------------------------------------------------------------------------
+  Latent-state reconstruction. Nobody knows this athlete's true muscle
+  fatigue, so there is nothing to score against and no correlation is
+  computed. Every latent figure in this project is synthetic-only.
+  Per-muscle half-lives. Sixteen parameters from 99 confounded sessions
+  would be noise with a decimal point.
+  The first 42 days of wearable data are consumed warming the rolling
+  baselines; 241 days carry no body
+  mass at all, so bodyweight-exercise capacity rests on recalled anchors.
+
+==============================================================================

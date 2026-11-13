@@ -1,0 +1,102 @@
+==============================================================================
+REAL-DATA DIAGNOSIS — where the residual comes from
+==============================================================================
+
+library v1.2 (3fad7de7d0ac), mapping dd48892f1de4, contexts 6e06d667bb55, opened 10 times (2 scoring, 8 dry), first on 2026-08-24. More than one scoring opening: any model change made between them consumed the holdout, and results must be reported as a weaker claim.
+Development analysis (D22). Nothing here can validate a fix.
+
+n = 271 scored sets, bias +0.1784, MAE 0.2371
+
+------------------------------------------------------------------------------
+1. IS THE BIAS PERSON-LEVEL OR EXERCISE-LEVEL?
+------------------------------------------------------------------------------
+If every exercise is biased the same way, one pooled parameter fixes all
+of them and Layer 4's partial pooling is the answer. If they scatter,
+pooling cannot help and the fault is per-exercise or structural.
+
+  exercises with >=5 scored sets : 22
+  mean of per-exercise biases    : +0.1630
+  spread (sd) across exercises   : 0.1893
+  share biased in the same direction: 21/22 positive
+
+  most biased:
+    cable_lateral_raise::Second gym    +0.8485   n=19
+    bayesian_cable_curl::Main gym      +0.4248   n=10
+    cable_lateral_raise::Main gym      +0.3539   n=6
+    cross_body_cable_triceps_extension::Second gym +0.3397   n=24
+    plate_loaded_seated_calf_raise::Second gym +0.2413   n=18
+    converging_chest_press::Second gym +0.2100   n=8
+  least biased:
+    weighted_chest_dip                 -0.0037   n=10
+    pec_deck_fly::Second gym           +0.0172   n=14
+    smith_machine_45_incline_bench_press::Main gym +0.0242   n=5
+    smith_machine_45_incline_bench_press::Second gym +0.0243   n=7
+
+------------------------------------------------------------------------------
+2. HOW MUCH WORK IS SUPPRESSION DOING?
+------------------------------------------------------------------------------
+The engine predicts capacity x (1 - suppression). 'Last observation'
+predicts the previous result and applies no suppression at all. If the
+athlete's session-to-session variation is smaller than the suppression
+the engine applies, then suppression is adding error, not removing it.
+
+  suppression at projection time (n=292)
+    median 2.40%   p90 3.82%   max 4.75%
+
+  session-to-session change in observed performance (n=231)
+    mean +0.0152   mean |change| 0.1207   sd 0.2124
+
+  mean suppression applied     0.0235
+  mean absolute real movement  0.1207
+
+------------------------------------------------------------------------------
+3. IS CAPACITY LAGGING, AND IS THE HUBER CLIP WHY?
+------------------------------------------------------------------------------
+The clip is k times each exercise-context's robust session scale. If an
+innovation exceeds it on most updates, capacity is rate-limited and
+cannot track a moving target however wrong it is.
+
+  updates where the clip binds : 119/271 (43.9%)
+  median |innovation|          : 0.1302   (median clip 0.1345)
+  mean innovation              : +0.1541
+
+------------------------------------------------------------------------------
+4. WITHIN A SESSION, DOES THE FATIGUE CORRECTION HOLD?
+------------------------------------------------------------------------------
+Capacity learns from every eligible set, each corrected by dividing out
+the fatigue acting at that moment. If the correction is right, the first
+and last set of a session should imply the same capacity. If the last
+still implies less, later sets drag capacity below what the scored set
+(always the first) supports, and the next projection comes in low.
+
+  sessions with >=2 scored sets : 301
+  last vs first, raw            : -0.0962 median (-9.17%)
+  last vs first, fatigue-corrected: -0.0442 median (-4.32%)
+
+  If the corrected figure is still materially negative, the engine's
+  suppression does not account for what happens inside a session.
+
+------------------------------------------------------------------------------
+5. WHAT IS THE ATHLETE ACTUALLY LOGGING?
+------------------------------------------------------------------------------
+The Nuzzo inversion turns effort into relative intensity. If the logged
+effort is not what the curve assumes, every capacity estimate inherits
+the error, and no amount of pooling or clipping fixes it.
+
+  RPE recorded on 862 of 976 sets
+  RPE distribution : {6.0: 2, 7.0: 13, 8.0: 41, 9.0: 232, 10.0: 574}
+  reps distribution: {1: 5, 2: 22, 3: 52, 4: 85, 5: 130, 6: 183, 7: 168, 8: 123, 9: 80, 10: 65, 11: 17, 12: 23, 13: 5, 14: 5}
+
+  implied relative intensity (n=862)
+    median 0.853   p10 0.795   p90 0.928
+
+------------------------------------------------------------------------------
+6. HOW SPARSE IS THE EVIDENCE?
+------------------------------------------------------------------------------
+  scored sets per exercise: median 6, max 24
+  exercises reaching 20 scored sets: 1/40
+  days between sessions of the same exercise: median 4, mean 11.8
+  local fatigue half-life is 1.2 days, so by the next
+  session of an exercise the fatigue it caused has decayed to about 10.9%
+
+==============================================================================

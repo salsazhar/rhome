@@ -1,0 +1,29 @@
+{
+ "versions": [
+  {
+   "label": "v0",
+   "frozen_at": "2026-08-24T22:23:33+01:00",
+   "commit": "39f385db29188a8c9321d8aa8a11aa8e67f3e738",
+   "parameters_digest": "b371cfbe90a05a10b8a913fedb6f66cc",
+   "source_digest": "66e364e8a74a0085757b0adc1c812dae",
+   "library": {
+    "version": "v1.2",
+    "filename": "exercise_library_v1_2.csv",
+    "sha256": "3fad7de7d0ac323057ef2ff28f777111a309ae8c4f0921cf37a5c2a5f6f77906",
+    "exercises": 1074
+   },
+   "inputs": {
+    "data/real_exercise_mapping.json": "dd48892f1de4b8940e413638b6010faf1006c04a2f7d093e253ec33a2555834a",
+    "data/real_conventions.json": "e9d68caf20fe9578c521fa9c457b906f2d687298b5dfb256f27d266dc4b8c617",
+    "data/real_gym_tags.json": "6e06d667bb55e33f42ed018191128ba31349f9345d99a12650e27311d2d473c2",
+    "data/real_body_mass.json": "941ed5ea074c99f657b354e19b787781e9e5d454af6b0d7a78f63910c8e02457"
+   },
+   "known_defects": [
+    "LIM-38"
+   ],
+   "note": "Frozen so D22's prospective regime has a dated reference.",
+   "recorded_at": "2026-08-26T11:10:07.318817+00:00",
+   "digest": "cbcf2cb3ff92c2162faba69466718bd3"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+exercise_id,name,movement_pattern,equipment,exercise_kind,primary_muscles,secondary_muscles,stabiliser_muscles,compoundness,systemic_cost,bodyweight_fraction,axial_load,eccentric_demand,nuzzo_curve,unilateral,coefficient_source
+bench_press,Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,anterior_delts|triceps,upper_back,0.78,0.55,,0.15,0.60,bench,false,curated
+incline_db_press,Incline Dumbbell Press,horizontal_press,dumbbell,weighted_reps,chest,anterior_delts|triceps,upper_back,0.68,0.50,,0.20,0.65,general,false,curated
+weighted_dip,Weighted Dip,horizontal_press,bodyweight,weighted_reps,chest|triceps,anterior_delts,upper_back,0.72,0.52,0.95,0.20,0.70,general,false,curated
+overhead_press,Barbell Overhead Press,vertical_press,barbell,weighted_reps,anterior_delts,triceps|lateral_delts,abs|spinal_erectors,0.75,0.58,,0.70,0.55,general,false,curated
+weighted_pullup,Weighted Pull-up,vertical_pull,bodyweight,weighted_reps,lats|upper_back,biceps,forearms,0.72,0.55,1.00,0.10,0.60,general,false,curated
+lat_pulldown,Lat Pulldown,vertical_pull,machine,weighted_reps,lats,biceps|upper_back,forearms,0.50,0.45,,0.05,0.50,general,false,curated
+chest_supported_row,Chest-Supported Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms,0.52,0.47,,0.00,0.50,general,false,curated
+cable_row,Seated Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms,0.48,0.46,,0.10,0.45,general,false,curated
+lateral_raise,Dumbbell Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,,,0.22,0.24,,0.05,0.50,general,false,curated
+reverse_pec_deck,Reverse Pec Deck,isolation,machine,weighted_reps,posterior_delts,upper_back,,0.20,0.25,,0.00,0.45,general,false,curated
+db_curl,Dumbbell Curl,isolation,dumbbell,weighted_reps,biceps,forearms,,0.22,0.26,,0.05,0.60,general,false,curated
+triceps_pressdown,Triceps Pressdown,isolation,cable,weighted_reps,triceps,,,0.20,0.24,,0.05,0.50,general,false,curated
+wrist_curl,Cable Wrist Curl,isolation,cable,weighted_reps,forearms,,,0.18,0.22,,0.00,0.45,general,false,curated
+back_squat,Barbell Back Squat,squat,barbell,weighted_reps,quads|glutes,hamstrings|adductors|spinal_erectors,abs,0.95,0.92,,0.95,0.75,general,false,curated
+hack_squat,Hack Squat,squat,machine,weighted_reps,quads,glutes,,0.60,0.72,,0.45,0.70,general,false,curated
+leg_press,Leg Press,squat,machine,weighted_reps,quads,glutes|hamstrings,,0.55,0.70,,0.20,0.60,leg_press,false,curated
+romanian_deadlift,Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes,spinal_erectors,forearms|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+deadlift,Conventional Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,quads|lats|upper_back,forearms,1.00,1.00,,1.00,0.55,general,false,curated
+bulgarian_split_squat,Bulgarian Split Squat,lunge,dumbbell,weighted_reps,quads|glutes,hamstrings|adductors,abs,0.65,0.75,0.85,0.40,0.80,general,true,curated
+leg_extension,Leg Extension,isolation,machine,weighted_reps,quads,,,0.20,0.28,,0.00,0.55,general,false,curated
+leg_curl,Lying Leg Curl,isolation,machine,weighted_reps,hamstrings,,,0.18,0.26,,0.00,0.65,general,false,curated
+calf_raise,Standing Calf Raise,isolation,machine,weighted_reps,calves,,,0.18,0.24,,0.30,0.70,general,false,curated
+back_extension,45-Degree Back Extension,hinge,bodyweight,weighted_reps,spinal_erectors,glutes|hamstrings,,0.40,0.42,0.55,0.50,0.55,general,false,curated
+hip_adduction,Machine Hip Adduction,isolation,machine,weighted_reps,adductors,,,0.18,0.25,,0.00,0.45,general,false,curated
+cable_crunch,Cable Crunch,isolation,cable,weighted_reps,abs,,,0.20,0.24,,0.10,0.50,general,false,curated
+hanging_leg_raise,Hanging Leg Raise,isolation,bodyweight,reps_only,abs,,forearms,0.30,0.28,0.55,0.15,0.55,general,false,curated
+ab_wheel_rollout,Ab Wheel Rollout,isolation,bodyweight,reps_only,abs,lats|spinal_erectors,,0.32,0.30,0.60,0.25,0.85,general,false,curated

@@ -1,0 +1,14 @@
+{
+  "hidden/latent_daily.csv": "89974bd6a3dc5a97f2aa9a19393d3944bc9f12836af00d417d1533f6d9019143",
+  "hidden/latent_sets.csv": "218b65372b208f6fde748d0d775384ee99937a130033c04f2f8ffe7d1da0cd5b",
+  "hidden/scenario_manifest.csv": "e6659769f05d806fe5edf9c34162bde419052efc2da800d757ca04220d0deb03",
+  "metadata/raw_dirty.csv": "2a5003d594ddf094adb491cec9bd78b5b8128e74995658f21a5fa8b6f258ef9d",
+  "observable/daily_recovery.csv": "8a934bc85d8755adf57f6999bd306008706e04a2012dd62d6fa4a1519266a609",
+  "observable/exercise_metadata.csv": "93fb3aa5cb0101b20cafd661d7ce1b05f4ef25a5043c3dd915bf81d062d5746f",
+  "observable/performance_tests.csv": "65fbf627735881f140c7ee665e821ea88b76834d26aef7aa074dfaf446715cf2",
+  "observable/sets.csv": "e5383b6599bad60ddf40a5d0f2989b72683efc107104443f72e6502c3e316baa",
+  "observable/workouts.csv": "8a2e17b0bff3b0ba631cad485dba6af50b8b2c6777a6706603aaf8326c9e02bd",
+  "metadata/generation_config.json": "3120c0378a739e5017d899bb53d3d5875b62acfc92af83ee04c61249824cda16",
+  "metadata/quality_report.json": "dffd33d38bbd6529645a0fe6641b1ee176d2d0c8891cc2bb27d3b7c188a86e71",
+  "metadata/schema_version.json": "f1d4fd4dffeb7826ca6e0f90d507f781954b3c88b6e4e8849f723639acd7bb88"
+}

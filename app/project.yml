@@ -1,0 +1,44 @@
+name: RhomeLogger
+options:
+  bundleIdPrefix: co.uk.azhar.rhome
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    # Team ID is the certificate's OU field, not the value in its common name.
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  RhomeLogger:
+    type: application
+    platform: iOS
+    sources:
+      - path: RhomeLogger
+        excludes:
+          - "**/.DS_Store"
+    resources:
+      - path: RhomeLogger/Data/exercise_library.csv
+        type: file
+    info:
+      path: RhomeLogger/Info.plist
+      properties:
+        CFBundleDisplayName: Rhome
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        ITSAppUsesNonExemptEncryption: false
+        # Puts the app's Documents folder in Files > On My iPhone > Rhome, so a
+        # finished session's export can be picked up without the share sheet.
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: co.uk.azhar.rhome.logger
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1"

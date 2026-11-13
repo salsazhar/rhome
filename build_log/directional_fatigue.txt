@@ -1,0 +1,113 @@
+==============================================================================
+DIRECTIONAL FATIGUE TEST — is the per-muscle number real?
+==============================================================================
+
+library v1.2 (3fad7de7d0ac), mapping dd48892f1de4, contexts 6e06d667bb55, opened 15 times (2 scoring, 13 dry), first on 2026-08-24. More than one scoring opening: any model change made between them consumed the holdout, and results must be reported as a weaker claim.
+Development analysis (D22). Nothing here validates anything.
+
+Reference: rolling median of the exercise's own implied capacity,
+minimum 3 prior sessions. The engine's capacity estimate is
+not used on the observed side.
+
+------------------------------------------------------------------------------
+1. COVERAGE — how often the engine gets to make a call at all
+------------------------------------------------------------------------------
+Accuracy without this is unreadable: a model that says nothing can
+never be caught being wrong.
+
+  training sessions                       85
+  sessions with 2+ referenced exercises   53
+  exercise-sessions seen                 271
+  ... with a 3-session reference         171
+  candidate pairs, different primaries   143
+  pairs rejected, shared primary mover    37
+
+  predicted suppression gap: median 0.0032, max 0.0314
+  gaps above 1%: 10 of 143
+
+------------------------------------------------------------------------------
+2. INSTRUMENT CHECK — before any null is believed
+------------------------------------------------------------------------------
+A 50% result means either 'no signal' or 'the harness is broken', and
+those are not distinguishable by staring at the number. Two checks.
+
+  perfect predictor (uses the answer)   143/143 = 100.0%   — must be 100%
+  inverted predictor                    0/143 = 0.0%   — must be 0%
+
+  observed residual gap within a pair: median 0.1790,
+  90th percentile 0.5314, max 0.9901
+  There is real variation to predict; the target is not flat.
+
+------------------------------------------------------------------------------
+3. THE TEST — does the more suppressed exercise come in lower?
+------------------------------------------------------------------------------
+  engine suppression   71/143 = 49.7%   (p = 1.0000 vs chance)
+  local term only      62/143 = 43.4%   (p = 0.1320)
+
+  The local term is the muscle-specific claim; the systemic and
+  neuromuscular terms are common to the session and largely cancel
+  within a pair.
+
+------------------------------------------------------------------------------
+4. BASELINES — no score without its trivial competitor (D20)
+------------------------------------------------------------------------------
+Session position is the one that matters. Later exercises are worse
+regardless of recovery, so if the engine merely encodes running order,
+order alone will match it.
+
+  chance               50.0%
+  session position     61/143 = 42.7%   (p = 0.0941)
+  decayed set count    78/143 = 54.5%   (p = 0.3156)
+  days since trained   63/143 = 44.1%   (p = 0.1807)
+
+------------------------------------------------------------------------------
+5. EFFECT-SIZE FLOOR — accuracy against how much is scored
+------------------------------------------------------------------------------
+A correct direction on a 0.4%-vs-0.2% gap is not information. Raising
+the floor should raise accuracy if the signal is real; if it does not,
+the engine is right about pairs it barely distinguishes and wrong
+about the ones it commits to.
+
+    floor   scored   coverage    engine   position
+    0.000      143      100%     49.7%      42.7%
+    0.005       43       30%     60.5%      37.2%
+    0.010       10        7%     40.0%      50.0%
+    0.020        2        1%     50.0%      50.0%
+    0.030        1        1%    100.0%     100.0%
+    0.050        —          —         —
+
+------------------------------------------------------------------------------
+6. CEILING — could this test detect a CORRECT model of this size?
+------------------------------------------------------------------------------
+Before concluding the model is wrong, ask what the best possible model
+of the magnitude the engine predicts would have scored. If the answer
+is 'about chance', the null says nothing about the model (D19).
+
+  sd of predicted pair gap   0.0060
+  sd of observed pair gap    0.3243
+  ratio                      0.0184
+
+  A PERFECT predictor of an effect this size scores 50.6%.
+  That is 0.14 SE from chance at n = 143 — NOT detectable.
+
+  So the null is uninformative about correctness. The engine predicts
+  effects far below what this measurement can resolve. What the test
+  does establish is the effect SIZE, which is a real finding on its own:
+  a fatigue model this faint cannot drive a readiness display whatever
+  its direction.
+
+  For a perfect model to reach 60% here, the predicted gap would need
+  sd 0.105 against the current 0.0060 — 18x larger.
+
+------------------------------------------------------------------------------
+7. POWER — what this test could and could not have detected
+------------------------------------------------------------------------------
+  n = 143 pairs, standard error at chance = 0.042
+
+  a true accuracy of 55%  ->  1.2 SE from chance   NOT detectable
+  a true accuracy of 60%  ->  2.4 SE from chance   detectable
+  a true accuracy of 65%  ->  3.6 SE from chance   detectable
+  a true accuracy of 70%  ->  4.8 SE from chance   detectable
+
+  So this test can find a strong effect and has not. It cannot rule
+  out a weak one, and must not be quoted as having done so.

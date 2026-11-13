@@ -1,0 +1,29 @@
+[project]
+name = "rhome"
+version = "0.0.1"
+description = "Resistance-training load, recovery and performance modelling system"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "pydantic>=2.0",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "spec(clause): the specification clause this test covers, e.g. spec('MODEL:5.2')",
+    "guardrail(n): the architectural guardrail this test enforces",
+]

@@ -1,0 +1,1375 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,hyperref,xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\setlength{\emergencystretch}{3em}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue,urlcolor=blue}
+
+\title{Rhome Mathematical Model Specification\\\large Version 0.6}
+\author{Rhome Project}
+\date{24 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document defines the version-0.6 mathematical architecture for Rhome, a resistance-training load, recovery and performance modelling system. The model is deliberately interpretable. It decomposes each logged set into muscle-specific stimulus and fatigue impulses, neuromuscular strain and systemic load; evolves those states continuously through time; modifies recovery dynamics using personalised sleep and autonomic context; and estimates exercise-specific performance trends. Scientific literature constrains the direction and plausible scale of the model, but several coefficients are engineering priors rather than empirically identified physiological constants. Those priors are explicitly marked and are intended to become athlete-specific parameters after sufficient longitudinal data exist.
+\end{abstract}
+
+\section{Scope and epistemic status}
+
+Rhome is an \emph{inference model}, not a direct physiological measurement system. In particular:
+
+\begin{itemize}
+    \item Local muscular fatigue is latent and is inferred from training dose, time and subsequent performance.
+    \item ``Neuromuscular strain'' is a modelled index; Rhome does not claim to measure central nervous-system fatigue. Acute resistance-exercise studies show that neuromuscular performance may remain depressed for 24--72 h after demanding protocols, while the persistent decrement is not necessarily primarily central in origin \cite{moran2017,thomas2018}.
+    \item HRV, resting HR and sleep are contextual signals. They do not uniquely identify training readiness, and changes in vagal HRV can accompany both positive adaptation and maladaptation \cite{bellenger2016}.
+    \item No acute:chronic workload ratio is interpreted as a causal injury-risk ``safe zone''; the conceptual and statistical basis for doing so is inadequate \cite{impellizzeri2020}.
+\end{itemize}
+
+The model therefore distinguishes three classes of numbers:
+
+\begin{enumerate}
+    \item \textbf{Evidence-backed mappings}: for example, RPE-to-RIR conventions and the population REPS--\%1RM relationship.
+    \item \textbf{Evidence-constrained priors}: for example, a local-fatigue half-life selected so that difficult sessions can plausibly leave residual fatigue across 24--72 h.
+    \item \textbf{Engineering parameters}: coefficients needed to make the v0 system computationally explicit but not directly identified by published evidence. These must remain versioned and calibratable.
+\end{enumerate}
+
+\section{Notation}
+
+Let:
+
+\begin{itemize}
+    \item $m\in\mathcal{M}$ index muscles or muscle groups;
+    \item $e\in\mathcal{E}$ index exercises;
+    \item $i$ index working sets;
+    \item $t$ denote continuous time in hours unless otherwise stated.
+\end{itemize}
+
+For set $i$:
+
+\begin{align*}
+w_i &:= \text{external load},\\
+r_i &:= \text{completed repetitions},\\
+p_i &:= \text{reported RPE},\\
+q_i &:= \text{reported/estimated repetitions in reserve (RIR)},\\
+u_i &:= \text{estimated relative intensity as a fraction of 1RM}.
+\end{align*}
+
+The principal latent state is
+
+\begin{equation}
+\mathbf{x}(t)=\left(
+\{F_m(t)\}_{m\in\mathcal M},
+N(t),G(t),
+\{A_m(t)\}_{m\in\mathcal M},
+\{P_e(t)\}_{e\in\mathcal E}
+\right),
+\end{equation}
+
+where
+
+\begin{itemize}
+    \item $F_m$: local residual fatigue for muscle $m$;
+    \item $N$: systemic neuromuscular-strain state;
+    \item $G$: general/systemic fatigue state;
+    \item $A_m$: slow adaptive/training-capacity state for muscle $m$;
+    \item $P_e$: exercise-specific latent performance capacity.
+\end{itemize}
+
+All of these states are dimensionless except $P_e$, which may be represented in exercise-specific effective-load or estimated-1RM units.
+
+\section{From RPE to RIR}
+
+If RIR is explicitly logged, the logged RIR is used. Otherwise, for sufficiently hard working sets,
+
+\begin{equation}
+q_i = \max(0,10-p_i).
+\end{equation}
+
+This follows the resistance-training RPE scale in which RPE 10 corresponds to 0 RIR and RPE 9 to approximately 1 RIR \cite{zourdos2016}. The mapping is not assumed exact. Resistance-trained participants can estimate low RIR with useful but non-zero error; one bench-press study reported absolute RIR error of $0.65\pm0.78$ repetitions for 1- and 3-RIR predictions \cite{refalo2024}.
+
+For the synthetic simulator, the logged value is therefore noisy:
+
+\begin{equation}
+q_i^{\mathrm{logged}}=\operatorname{clip}\left(q_i^{\mathrm{true}}+\epsilon_{q,i},0,8\right),
+\qquad
+\epsilon_{q,i}\sim\mathcal{N}(0,0.9^2),
+\end{equation}
+
+with the 0.9-repetition standard deviation deliberately conservative relative to the bench-press validation data. This noise term is a simulator prior, not a universal empirical constant.
+
+\section{Estimating relative intensity}
+
+Define repetitions to failure implied by the logged set as
+
+\begin{equation}
+n_i^{\mathrm{fail}}=r_i+q_i.
+\end{equation}
+
+Rather than using a generic Epley equation, Rhome v0 estimates relative intensity by inverting the meta-regression relationship between maximal repetitions and percentage of 1RM reported by Nuzzo et al. \cite{nuzzo2024}. Their analysis incorporated 952 repetitions-to-failure tests from 7289 individuals and found material exercise-specific differences, particularly for bench press and leg press.
+
+For the general model, Rhome uses piecewise-linear interpolation of the following mean relationship:
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+\%1RM & Mean repetitions to failure \\
+\midrule
+95 & 3.28 \\
+90 & 4.94 \\
+85 & 7.15 \\
+80 & 9.75 \\
+75 & 12.37 \\
+70 & 14.80 \\
+65 & 17.11 \\
+60 & 19.53 \\
+55 & 22.43 \\
+50 & 25.99 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Let $g(n)$ be the inverse interpolation of this table. Then
+
+\begin{equation}
+u_i = \frac{g(n_i^{\mathrm{fail}})}{100}.
+\end{equation}
+
+Exercise-specific Nuzzo tables should be used for barbell bench press and leg press. For other exercises the general relationship is the v0 prior.
+
+\subsection{Domain of validity and edge-case policy}
+
+The tabulated relationship supports $n^{\mathrm{fail}}\in[3.28,25.99]$, corresponding to $u\in[0.50,0.95]$. Real sets fall outside this domain in both directions, and the v0 policy differs by direction.
+
+\paragraph{Near-maximal sets ($n^{\mathrm{fail}}<3.28$).}
+Clipping at $u=0.95$ would make a true single indistinguishable from a heavy triple and would prevent the model from ever observing $100\%$ of 1RM. This matters because \texttt{performance\_tests.csv} deliberately contains low-fatigue singles as high-information capacity anchors. Rhome therefore extends the curve linearly to the definitional anchor $(n^{\mathrm{fail}}=1,\;u=1.00)$:
+
+\begin{equation}
+u = 1.00 - 0.05\,\frac{n^{\mathrm{fail}}-1}{2.28},
+\qquad 1\le n^{\mathrm{fail}}<3.28.
+\end{equation}
+
+The anchor itself is a definition rather than an empirical estimate: one repetition performed at maximum is $100\%$ of 1RM by construction. The linear segment joining it to the tabulated curve is an engineering prior.
+
+\paragraph{High-repetition sets ($n^{\mathrm{fail}}>25.99$).}
+Below approximately $50\%$ of 1RM the repetitions-to-failure relationship flattens sharply and between-individual variation becomes large. Rhome clips at $u=0.50$ and does not extrapolate.
+
+\paragraph{Uncertainty flag.}
+Every set carries a relative-intensity confidence label:
+
+\begin{center}
+\begin{tabular}{llp{0.28\textwidth}}
+\toprule
+Condition & \texttt{u\_conf.} & Effect \\
+\midrule
+$3.28\le n^{\mathrm{fail}}\le 25.99$ & \texttt{high} & Normal use \\
+$1\le n^{\mathrm{fail}}<3.28$ (extension) & \texttt{medium} & Used with reduced weight \\
+$n^{\mathrm{fail}}>25.99$ (clipped) & \texttt{low} & Excluded from performance estimation \\
+Drop segment; or no RPE and no RIR & \texttt{low} & Excluded from performance estimation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Sets labelled \texttt{low} still contribute to the fatigue, strain and systemic channels, because the work was genuinely performed. They are excluded only from $\widehat P_{e,i}$ (Sec.~\ref{sec:perf}), because the Nuzzo inversion assumes a set taken to a known proximity to failure from a non-pre-fatigued starting state.
+
+\section{Set types and inclusion rules}
+
+The \texttt{set\_type} field determines which channels a logged set enters.
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+\texttt{set\_type} & Stimulus $s$ & Local $d$ & Strain $n$ & Systemic $g$ & Performance $\widehat P$ \\
+\midrule
+\texttt{warmup}  & --- & --- & --- & --- & --- \\
+\texttt{working} & yes & yes & yes & yes & yes \\
+\texttt{backoff} & yes & yes & yes & yes & yes \\
+\texttt{drop}    & yes & yes & yes & yes & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Warm-up sets} are stored for completeness and for session-context features, but contribute no dose in v0. They may be promoted to working sets by configuration for an athlete whose warm-up volume is materially large.
+
+\paragraph{Back-off sets} are ordinary working sets performed at reduced load after a top set, and require no special treatment. The reduced load is already reflected in the reported repetitions and RIR, and therefore in $u$.
+
+\paragraph{Drop-set segments} are logged as separate rows sharing an \texttt{exercise\_id} with consecutive \texttt{set\_number}s. Each segment contributes fully to all four dose channels. However, a drop segment begins in a deliberately pre-fatigued state, so its repetitions do not carry the information about fresh capacity that the Nuzzo relationship assumes. Drop segments therefore carry \texttt{u\_confidence = low}, are excluded from $\widehat P_{e,i}$, and are excluded from observable PR detection.
+
+No additional fatigue multiplier is applied to drop segments in v0. The extra dose is already captured by the additional repetitions performed at low RIR, and an extra multiplier would introduce a parameter that no available evidence identifies.
+
+\section{Exercise-to-muscle contribution matrix}
+\label{sec:contrib}
+
+Each exercise has two muscle-contribution vectors: one for adaptive stimulus and one for fatigue spillover.
+
+\begin{align}
+c^{S}_{me} &\in [0,1],\\
+c^{F}_{me} &\in [0,1].
+\end{align}
+
+The default v0 coding is
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Role & $c^S$ & $c^F$ \\
+\midrule
+Primary/direct & 1.00 & 1.00 \\
+Secondary/indirect & 0.50 & 0.50 \\
+Stabiliser & 0.00 & 0.20 \\
+Uninvolved & 0.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The 0.5 value for indirect sets is evidence-constrained: a 2026 dose-response meta-regression found the strongest model evidence when indirect sets were counted fractionally as one-half of a direct set \cite{pelland2026}. Applying the same 0.5 coefficient to acute fatigue is an engineering simplification. The stabiliser fatigue value 0.20 is purely a v0 engineering prior and must not be interpreted as a hypertrophy-equivalent set count.
+
+\section{Derived coefficients for user-created exercises}
+\label{sec:derived}
+
+The exercise library has two layers. The \emph{base layer} --- name, movement pattern, equipment and muscle tags --- is commodity data. The \emph{scoring layer} --- $c^S$, $c^F$, $\kappa_e$, $b_e$, $\beta_e$ --- is specific to this model and is what converts a logged movement into a dose.
+
+A curated exercise has a hand-assigned scoring layer. A user-created exercise cannot: a person defining a new movement supplies muscles, not coefficients. This section specifies how the scoring layer is derived from what they do supply.
+
+\subsection{Contribution vectors from muscle tags}
+
+The interface collects three tiers of muscle involvement, which map directly onto the roles of Sec.~\ref{sec:contrib}:
+
+\begin{center}
+\begin{tabular}{llcc}
+\toprule
+Interface tier & Model role & $c^S$ & $c^F$ \\
+\midrule
+Primary & Direct & 1.00 & 1.00 \\
+Secondary & Indirect & 0.50 & 0.50 \\
+Tertiary & Stabiliser & 0.00 & 0.20 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Only the primary tier is required. The asymmetry of the tertiary tier is worth surfacing in the interface: such a muscle accrues fatigue but no adaptive credit, which is the correct treatment of stabilising work and is not obvious to a user.
+
+Display labels are resolved to model groups before coefficients are assigned, so tagging Upper Chest and Mid Chest yields one \texttt{chest} contribution rather than two.
+
+\subsection{Systemic cost from recruited mass}
+
+$b_e$ represents whole-body demand, which tracks the amount of muscle mass involved. It is therefore derivable from the athlete's own tagging. Assign each model group a relative mass weight $\mu_m$:
+
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+Group & $\mu_m$ & Group & $\mu_m$ \\
+\midrule
+quads & 1.00 & chest & 0.60 \\
+glutes & 0.90 & upper\_back & 0.55 \\
+hamstrings & 0.70 & abs & 0.35 \\
+lats & 0.70 & calves & 0.25 \\
+spinal\_erectors & 0.55 & triceps & 0.22 \\
+adductors & 0.50 & biceps & 0.15 \\
+anterior\_delts & 0.20 & posterior\_delts & 0.12 \\
+lateral\_delts & 0.12 & forearms & 0.10 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Mass alone, however, is a poor predictor of systemic cost, and it is worth stating why. A leg extension recruits the quadriceps --- the largest entry in the table --- yet is systemically cheap, because the athlete is seated and braced and the absolute load is small. A pull-up and a chest-supported row recruit near-identical musculature at materially different whole-body cost. \emph{Mass identifies which muscles are working; posture and movement pattern determine what the effort costs the system.}
+
+Systemic cost is therefore built the same way as compoundness, with mass entering as a modulator rather than the driver:
+
+\begin{equation}
+b_e=\operatorname{clip}\left(
+b^{\mathrm{pattern}}+b^{\mathrm{equip}}
++0.10\min\!\left(1,\;\frac{1}{3}\sum_m c^{S}_{me}\,\mu_m\right),
+\;0.20,\;1.00\right),
+\end{equation}
+
+with
+
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+Pattern & $b^{\mathrm{pattern}}$ & Equipment & $b^{\mathrm{equip}}$ \\
+\midrule
+hinge & 0.75 & barbell & $+0.10$ \\
+squat & 0.72 & bodyweight & $+0.05$ \\
+lunge & 0.62 & dumbbell & $+0.04$ \\
+vertical/horizontal pull & 0.48 & cable & $-0.04$ \\
+vertical press & 0.48 & machine & $-0.06$ \\
+horizontal press & 0.42 & & \\
+isolation, rotation & 0.18 & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The equipment term is a proxy for postural demand: a machine supports the torso and reduces systemic cost, a barbell requires the athlete to stabilise the load themselves.
+
+The mass weights and both coefficient tables are engineering priors reflecting gross segmental distribution and typical postural demand. They are not measured cross-sectional areas or force-plate values.
+
+\subsection{Compoundness from equipment and pattern}
+
+$\kappa_e$ reflects high-force, multi-joint demand, which the muscle tags do not carry. It is derived from movement pattern and equipment, in the same form as systemic cost:
+
+\begin{equation}
+\kappa_e=\operatorname{clip}\left(
+\kappa^{\mathrm{pattern}}+\kappa^{\mathrm{equip}}+0.06\,(n_{\mathrm{primary}}-1),
+\;0.15,\;1.00\right),
+\end{equation}
+
+with
+
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+Pattern & $\kappa^{\mathrm{pattern}}$ & Equipment & $\kappa^{\mathrm{equip}}$ \\
+\midrule
+squat, hinge & 0.82 & barbell & $+0.08$ \\
+vertical/horizontal press & 0.68 & bodyweight & $+0.02$ \\
+vertical/horizontal pull & 0.68 & dumbbell & $0.00$ \\
+lunge & 0.62 & machine & $-0.14$ \\
+isolation, rotation & 0.20 & cable & $-0.20$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Pattern is the base and equipment the adjustment, not the reverse. An earlier form made equipment the base, which allowed a barbell curl to derive $\kappa=0.44$ --- outside the documented isolation band of $0.15$--$0.30$ --- because the equipment term outweighed the isolation penalty. A movement's joint count and force demand are properties of the movement; the implement modulates them.
+
+\subsection{Bodyweight fraction}
+
+$\beta_e$ applies only to \texttt{reps\_only} and \texttt{assisted\_reps} kinds. It defaults by movement pattern --- vertical pull $1.00$, horizontal press $0.65$, squat $0.85$, hinge $0.55$ --- and is null otherwise.
+
+\subsection{Validation and status}
+
+Every derived exercise is stamped \texttt{coefficient\_source = derived}.
+
+The derivation is validated against the curated library, where the hand-assigned values provide a reference. The acceptance criterion is agreement within $\pm0.15$ on both $\kappa_e$ and $b_e$ for at least $80\%$ of curated exercises. The v0 library achieves $96\%$ (26 of 27).
+
+The bar is deliberately modest. The derivation exists to make a user-created exercise usable, not to replace curation: a curated coefficient should always be preferred where one exists.
+
+\paragraph{A known limitation.} The single curated exercise the derivation fails to reproduce is the 45-degree back extension, over-estimated on both coefficients. The cause is instructive rather than incidental. The \texttt{hinge} pattern covers both a heavily loaded standing deadlift and an unloaded supported back extension, and the derivation has no signal to separate them --- because the model deliberately cannot see absolute load (Sec.~\ref{sec:loadinv}). Relative-intensity invariance is the right decision for the dose channels, but it removes the one variable that would distinguish these two movements at the point of derivation.
+
+The consequence is bounded and specific: a user creating a lightly loaded supported hinge will receive an over-estimate of its cost until they curate it. Adding a \texttt{torso\_supported} descriptor to the base layer is the obvious remedy and is deferred rather than rejected; it was not adopted in v0 because a single boolean tuned against one exercise would be overfitting a 27-row library.
+
+Derived coefficients reduce the dose-quality confidence component of Sec.~\ref{sec:conf}, so a state assembled largely from user-created exercises reports lower confidence rather than presenting the certainty of the curated library.
+
+\paragraph{Accepted risk.} Derived exercises enter the same dose channels as curated ones. An athlete who creates many poorly tagged movements degrades their own state estimates. Confidence reports this; it does not prevent it. The alternative --- refusing to model user-created exercises --- would make the product unusable as a training log, which is the worse failure.
+
+\section{Per-set muscular stimulus}
+
+The literature supports a relationship between proximity to failure and hypertrophy, while the precise continuous dose-response remains uncertain \cite{robinson2024}. Rhome therefore uses a transparent, monotonic prior rather than pretending that exact effect sizes are known.
+
+Define the proximity-to-failure stimulus multiplier $\phi_S(q)$ by linear interpolation through
+
+\begin{center}
+\begin{tabular}{c|rrrrrrr}
+RIR $q$ & 0 & 1 & 2 & 3 & 4 & 5 & $\ge6$ \\
+\hline
+$\phi_S(q)$ & 1.00 & 0.95 & 0.85 & 0.72 & 0.58 & 0.45 & 0.30
+\end{tabular}
+\end{center}
+
+These coefficients are \textbf{engineering priors constrained by the observed direction of effect}; they are not fitted conversions from the meta-analysis.
+
+Very low-repetition sets should not be treated as identical hypertrophic stimulus to moderate-repetition sets merely because both reach 0 RIR. Define
+
+\begin{equation}
+\phi_R(r)=
+\begin{cases}
+0.20r, & 1\le r<5,\\
+1, & r\ge5.
+\end{cases}
+\end{equation}
+
+This is an engineering prior. It preserves the empirical observation that a wide range of loads can support hypertrophy when effort and volume are sufficient, while avoiding the implausible result that a single near-maximal repetition is assigned the same muscular-adaptation dose as a hard multi-repetition set. Higher loads remain important for strength-specific adaptation even when hypertrophy is comparable across broad loading ranges.
+
+The raw stimulus impulse to muscle $m$ from set $i$ is
+
+\begin{equation}
+s_{im}=c^{S}_{m e_i}\,\phi_S(q_i)\,\phi_R(r_i).
+\end{equation}
+
+Weekly or block-level stimulus is not assumed linear in adaptation. Higher weekly volume is associated with greater hypertrophy and strength gains, but with diminishing returns \cite{pelland2026}. Rhome therefore reports raw effective stimulus separately from a concave adaptation transform.
+
+For a rolling 7-day raw stimulus $V_m(t)$,
+
+\begin{equation}
+V_m(t)=\sum_{i:\,t_i\in[t-168,t]}s_{im},
+\end{equation}
+
+and an optional normalised adaptation-dose display is
+
+\begin{equation}
+H_m(t)=\frac{\log(1+V_m(t)/k_V)}{\log(1+V_{\mathrm{ref}}/k_V)}.
+\end{equation}
+
+$v0$ uses $k_V=8$ and $V_{\mathrm{ref}}=16$ effective-set units solely as shape/scaling constants. They are not claimed physiological thresholds.
+
+\section{Per-set local-fatigue impulse}
+
+Training to failure produces greater acute performance decrement and slower recovery than non-failure protocols, including when total volume is matched \cite{moran2017}. Rhome therefore imposes a stronger non-linearity for fatigue than for stimulus.
+
+Define
+
+\begin{center}
+\begin{tabular}{c|rrrrrr}
+RIR $q$ & 0 & 1 & 2 & 3 & 4 & $\ge5$ \\
+\hline
+$\phi_F(q)$ & 1.35 & 1.15 & 1.00 & 0.90 & 0.82 & 0.75
+\end{tabular}
+\end{center}
+
+and a repetition-dependent fatigue term
+
+\begin{equation}
+\psi_R(r)=\operatorname{clip}(0.80+0.02r,\,0.86,\,1.20).
+\end{equation}
+
+The exact values are evidence-constrained engineering priors; the scientific constraint is principally that failure/high-effort work and greater volume create disproportionate acute fatigue and can prolong recovery \cite{moran2017}.
+
+The raw set impulse is
+
+\begin{equation}
+\widetilde d_{im}=d_0\,c^{F}_{m e_i}\,\phi_F(q_i)\,\psi_R(r_i)\,\nu_i,
+\end{equation}
+
+where
+
+\begin{itemize}
+    \item $d_0=0.06$ is a dimensionless scaling constant before within-session curvature;
+    \item $\nu_i$ is an exercise-novelty/eccentric-damage modifier, ordinarily 1.0 and capped in v0 at 1.25.
+\end{itemize}
+
+The novelty term permits a newly introduced movement, unusually long eccentric exposure or return after a layoff to cause more residual local fatigue than an otherwise identical familiar session. Its numerical form is an engineering prior.
+
+\subsection{Within-session fatigue curvature}
+
+Later work for the same muscle lands on tissue already challenged earlier in
+the session. Let $p_{im}$ be the number of prior dose-bearing sets in the
+current logged session whose local-fatigue impulse includes muscle $m$. Rhome
+uses only this observable position; it does not read the current hidden state
+to choose the multiplier. The deposited local impulse is
+
+\begin{equation}
+d_{im}=\widetilde d_{im}\left[1+\gamma\min(p_{im},p_{\max})\right],
+\qquad \gamma=0.25,\quad p_{\max}=4.
+\end{equation}
+
+Thus the first through fifth dose-bearing positions receive multipliers
+$1,1.25,1.50,1.75,2.00$, after which the multiplier saturates. Stimulus, neuromuscular
+strain and systemic fatigue retain their own existing equations; a late arm
+exercise must not multiply the whole-body cost of an unrelated earlier squat.
+
+The base scale is normalised as $0.06=0.12/2$. The largest curved per-set
+local impulse therefore equals the largest ordinary linear impulse in document
+version 0.5, while the distribution across a session becomes non-linear. This
+is a Grade-C engineering construction, not a human physiological estimate. Its
+mechanical form differs from the simulator, which amplifies from hidden state,
+so the change does not create an inverse crime.
+
+\section{Neuromuscular-strain impulse}
+\label{sec:strain}
+
+The model should distinguish repeated high-force work from metabolically demanding but mechanically lighter work without claiming direct CNS measurement.
+
+Each exercise receives a compoundness/high-force coefficient $\kappa_e\in[0,1]$:
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Exercise class & Typical $\kappa_e$ \\
+\midrule
+Small-muscle isolation & 0.15--0.30 \\
+Machine compound & 0.45--0.65 \\
+Upper-body free-weight compound & 0.65--0.85 \\
+Large lower-body free-weight compound & 0.80--1.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Define
+
+\begin{equation}
+\phi_N(q)=
+\begin{cases}
+1.30,&q=0,\\
+1.15,&q=1,\\
+1.00,&q=2,\\
+0.90,&q\ge3.
+\end{cases}
+\end{equation}
+
+Then
+
+\begin{equation}
+n_i=n_0\,\kappa_{e_i}\,u_i^2\,\phi_N(q_i),
+\qquad n_0=0.10.
+\end{equation}
+
+The square on relative intensity is an engineering choice that makes near-maximal loading disproportionately expensive in this channel. The existence of a prolonged neuromuscular-performance decrement after demanding resistance exercise is supported, but its decomposition into central and peripheral mechanisms is not simple \cite{thomas2018}; therefore $N$ must remain an operational index.
+
+\section{Systemic-fatigue impulse}
+\label{sec:systemic}
+
+Each exercise receives a systemic-cost coefficient $b_e\in[0,1]$ representing the amount of active muscle mass and whole-body demand:
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Exercise class & Typical $b_e$ \\
+\midrule
+Small isolation & 0.20--0.35 \\
+Upper-body compound & 0.45--0.65 \\
+Unilateral lower-body compound & 0.65--0.85 \\
+Large bilateral lower-body compound / deadlift pattern & 0.80--1.00 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The set impulse is
+
+\begin{equation}
+g_i=g_0\,b_{e_i}\,\phi_F(q_i)\,\psi_R(r_i),
+\qquad g_0=0.07.
+\end{equation}
+
+These coefficients are engineering priors intended to separate systemic burden from local muscular work.
+
+\section{Load invariance of the dose channels}
+\label{sec:loadinv}
+
+The four dose channels share a structural property that is easy to overlook. It is a deliberate v0 decision rather than an accident of the equations, and is recorded here so that it is not later mistaken for a bug.
+
+Because $u_i=g(r_i+q_i)/100$, relative intensity is a deterministic function of repetitions and repetitions in reserve. Consequently
+
+\begin{equation}
+s_{im},\;d_{im},\;n_i,\;g_i
+\quad\text{depend only on}\quad
+(r_i,\,q_i,\,e_i,\,\nu_i),
+\end{equation}
+
+and the logged external load $w_i$ enters \emph{no} dose channel. It appears only in the performance estimate $\widehat P_{e,i}=w_i^{\mathrm{eff}}/u_i$.
+
+\paragraph{Rationale.} Fatigue is modelled as a function of relative effort rather than absolute mechanical load. A set of five repetitions at one repetition in reserve represents a comparable proportional demand on the athlete's current capacity whether the bar holds 60\,kg or 160\,kg: the novice near their limit and the advanced lifter near theirs are each near their own limit. Encoding absolute load into the fatigue channels would make the model's units athlete-specific and would cause modelled fatigue per set to inflate mechanically as the athlete grew stronger, which is not the intended behaviour.
+
+\paragraph{Accepted consequences.}
+\begin{itemize}
+    \item Fatigue impulses are invariant to absolute strength, so two years of progression do not by themselves increase modelled fatigue per set.
+    \item The model cannot distinguish two sets with identical $(r,q,e)$ but different bar loads. Under the relative-intensity assumption they are the same set.
+    \item Absolute-load information is not discarded. It is routed exclusively to the performance channel, where it is the primary signal.
+\end{itemize}
+
+\paragraph{Revisit trigger.} This decision should be re-examined if longitudinal residual analysis shows systematic performance-prediction bias correlated with absolute load, or if axial/spinal loading is later modelled as a distinct channel, for which absolute load rather than relative intensity is the natural driver. The \texttt{axial\_load} metadata field is reserved for that extension.
+
+\section{Time evolution of fatigue states}
+
+Rhome uses exponential decay as an interpretable first-order approximation. Exponential impulse-response models have a long history in fitness--fatigue modelling, although their predictive limitations and simplified physiology are well recognised \cite{imbach2022}.
+
+For local fatigue,
+
+\begin{equation}
+\frac{dF_m}{dt}=-\rho(t)\frac{\ln 2}{h_m}F_m(t)
++\sum_i d_{im}\,\delta(t-t_i),
+\end{equation}
+
+where $h_m$ is a muscle-specific half-life and $\rho(t)$ is the recovery-context multiplier.
+
+The v0 population prior is
+
+\begin{equation}
+h_m\sim \operatorname{TruncNormal}(30\ \mathrm{h},6^2;24,42).
+\end{equation}
+
+The 24--42 h range is \textbf{not a directly measured physiological half-life}. It is selected so that ordinary fatigue substantially decays over one to three days while failure-heavy/high-volume sessions can retain meaningful residual effects through 48--72 h, consistent with observed recovery time courses \cite{moran2017,thomas2018}.
+
+Neuromuscular strain and systemic fatigue follow
+
+\begin{align}
+\frac{dN}{dt}&=-\rho(t)\frac{\ln2}{h_N}N(t)+\sum_i n_i\delta(t-t_i),\\
+\frac{dG}{dt}&=-\rho(t)\frac{\ln2}{h_G}G(t)+\sum_i g_i\delta(t-t_i),
+\end{align}
+
+with v0 priors
+
+\begin{equation}
+h_N=24\ \mathrm{h},\qquad h_G=30\ \mathrm{h}.
+\end{equation}
+
+Again, these are model constants selected within the observed broad recovery timescale, not direct measurements of CNS or whole-body recovery.
+
+For a finite interval $\Delta t$ with no new impulse,
+
+\begin{equation}
+F_m(t+\Delta t)=F_m(t)\exp\left(-\rho_t\frac{\ln2}{h_m}\Delta t\right),
+\end{equation}
+
+and analogously for $N$ and $G$.
+
+\section{Recovery context from wearable variables}
+
+\subsection{Why underlying variables are used}
+
+Rhome does not use a proprietary readiness score as a direct multiplier because such scores already combine multiple physiological and activity variables. Instead it uses the underlying measurements and maintains its own transparent mapping.
+
+Nocturnal HR and RMSSD from Oura have shown good agreement with ECG at the nightly level \cite{cao2022}; Oura Gen3 global sleep measures also show useful agreement with polysomnography, while individual sleep stages and efficiency retain measurement error \cite{svensson2024}. These data are therefore suitable contextual inputs but should not be treated as exact physiology.
+
+\subsection{Personal baseline transforms}
+
+Define a 42-day rolling baseline for log-RMSSD and resting HR, excluding days with missing data and optionally excluding declared acute illness.
+
+\begin{align}
+z_{\mathrm{HRV},t}&=\operatorname{clip}\left(\frac{\log(\mathrm{RMSSD}_t)-\mu_{\log \mathrm{RMSSD},42}}{\sigma_{\log \mathrm{RMSSD},42}},-3,3\right),\\
+z_{\mathrm{RHR},t}&=\operatorname{clip}\left(\frac{\mathrm{RHR}_t-\mu_{\mathrm{RHR},42}}{\sigma_{\mathrm{RHR},42}},-3,3\right).
+\end{align}
+
+For sleep duration,
+
+\begin{equation}
+z_{\mathrm{sleep},t}=\operatorname{clip}\left(\frac{TST_t-T_{\mathrm{target}}}{1\ \mathrm{h}},-3,2\right),
+\end{equation}
+
+where $T_{\mathrm{target}}$ is initially 7.5 h in the synthetic athlete and is personalisable later. This prevents a chronically short-sleeping baseline from being interpreted as intrinsically optimal.
+
+Sleep efficiency and temperature are standardised against a rolling personal baseline:
+
+\begin{align}
+z_{\mathrm{eff},t}&=\operatorname{clip}\left(\frac{E_t-\mu_{E,42}}{\sigma_{E,42}},-3,3\right),\\
+z_{T,t}&=\operatorname{clip}\left(\frac{T_t-\mu_{T,42}}{\sigma_{T,42}},-3,3\right).
+\end{align}
+
+\subsection{Conditioning the autonomic expectation on recent training}
+\label{sec:condexp}
+
+A baseline computed as a rolling personal average knows nothing about what the athlete did yesterday. Under such a baseline, a depressed RMSSD after a heavy squat session and a depressed RMSSD on a rest day after unbroken sleep are identical evidence. They plainly are not: the first is the expected consequence of known training, and the second is a signal about something the model cannot see.
+
+Rhome therefore conditions the autonomic expectation on its own systemic-fatigue state, and uses the \emph{residual} rather than the raw deviation.
+
+Let $z_{G,t}$ be systemic fatigue standardised against its own 42-day rolling baseline:
+
+\begin{equation}
+z_{G,t}=\operatorname{clip}\left(\frac{G_t-\mu_{G,42}}{\sigma_{G,42}},-3,3\right).
+\end{equation}
+
+The expected autonomic deviation given recent training is
+
+\begin{align}
+\hat z_{\mathrm{HRV},t}&=-\gamma_{\mathrm{HRV}}\,z_{G,t}, & \gamma_{\mathrm{HRV}}&=0.30,\\
+\hat z_{\mathrm{RHR},t}&=+\gamma_{\mathrm{RHR}}\,z_{G,t}, & \gamma_{\mathrm{RHR}}&=0.25,
+\end{align}
+
+and the quantities entering the recovery multiplier are the residuals
+
+\begin{align}
+z^{\ast}_{\mathrm{HRV},t}&=\operatorname{clip}\left(z_{\mathrm{HRV},t}-\hat z_{\mathrm{HRV},t},-3,3\right),\\
+z^{\ast}_{\mathrm{RHR},t}&=\operatorname{clip}\left(z_{\mathrm{RHR},t}-\hat z_{\mathrm{RHR},t},-3,3\right).
+\end{align}
+
+\paragraph{What the expectation is for.} It is not a forecast, and its accuracy is not the point. Nocturnal HRV responds to work stress, alcohol, illness, sleep timing and much else; the training-attributable share of its variance is modest, and \cite{bellenger2016} is explicit that autonomic measures are non-specific. The expectation exists to \emph{partition} today's reading into the part recent training accounts for and the part it does not. A model that explains a fifth of the variance and knows it explains a fifth is doing its job.
+
+Rhome does not predict wearable data as an output. The autonomic channels are evidence about the athlete's condition entering a session; the information flows one way.
+
+\paragraph{Why only training load conditions the expectation.} Sleep already enters $\rho_t$ directly. Conditioning the autonomic expectation on sleep as well would count the same evidence twice, and would obscure which channel is doing the work. Load is conditioned on because it is the one influence the model already knows about with confidence.
+
+\paragraph{Coefficient status.} $\gamma_{\mathrm{HRV}}$ and $\gamma_{\mathrm{RHR}}$ are Grade C engineering priors, deliberately modest: a systemic load one standard deviation above the athlete's own normal is expected to depress HRV by $0.3$ and raise resting HR by $0.25$ standard deviations. No study identifies these values, and the literature constrains only the direction \cite{bellenger2016}. They should become athlete-specific once longitudinal residuals exist.
+
+\paragraph{Degradation.} Before 42 days of history, or where systemic fatigue is unavailable, $z_{G,t}=0$, the expectation is zero and the residual reduces to the raw deviation. The conditional form is therefore a refinement of the previous behaviour rather than a replacement for it.
+
+\subsection{Recovery multiplier}
+
+The v0 recovery-context multiplier is
+
+\begin{equation}
+\rho_t=\operatorname{clip}\left[
+1+0.05z^{\ast}_{\mathrm{HRV},t}
+-0.04z^{\ast}_{\mathrm{RHR},t}
++0.04z_{\mathrm{sleep},t}
++0.02z_{\mathrm{eff},t}
+-0.03|z_{T,t}|,
+\ 0.80,1.15
+\right],
+\end{equation}
+
+using the conditioned residuals of Sec.~\ref{sec:condexp} for the autonomic terms and raw deviations for the rest.
+
+The \emph{form} is evidence-informed; the \emph{weights and bounds are engineering priors}. They are intentionally small because HRV and resting HR are noisy, non-specific markers. A systematic review/meta-analysis found autonomic changes with training adaptation but also ambiguity across positive and negative training states \cite{bellenger2016}. Acute sleep loss is associated with impaired physical performance on average, but the magnitude is heterogeneous across protocols, exercise modes and time of day \cite{craven2022}. Rhome therefore avoids large deterministic penalties from any single wearable variable.
+
+If wearable variables are missing, their contribution is set to zero rather than imputing a pathological state. Confidence is reduced accordingly, as specified in Sec.~\ref{sec:conf}.
+
+\subsection{Reporting the partition}
+
+Both components are retained for the explanation trace, because the useful statement to an athlete is not the number but the attribution:
+
+\begin{itemize}
+    \item ``Recovery context is below baseline --- expected, given Thursday's session'' when $\hat z_{\mathrm{HRV}}$ accounts for most of the deviation;
+    \item ``Recovery context is below baseline, and not explained by recent training'' when the residual dominates.
+\end{itemize}
+
+Neither statement is a forecast. They are the same computation described honestly, and they are the difference between a number and an explanation.
+
+\section{Non-exercise activity and steps}
+\label{sec:steps}
+
+Walking/activity is treated as a low-amplitude external load, not as resistance-training volume and not as a generic readiness penalty.
+
+Let $S_t^{\mathrm{steps}}$ be daily steps and $B_t^{\mathrm{steps}}$ a 28-day personal baseline. Define
+
+\begin{equation}
+a_t=\max\left(0,\frac{S_t^{\mathrm{steps}}-B_t^{\mathrm{steps}}}{5000}\right).
+\end{equation}
+
+Then a high-step day contributes
+
+\begin{align}
+\Delta G_{\mathrm{steps}}&=0.02a_t,\\
+\Delta F_{m,\mathrm{steps}}&=\eta_m a_t,
+\end{align}
+
+where $\eta_m$ is small and non-zero only for relevant lower-limb groups (v0.6: calves 0.003, quads 0.0016, glutes 0.0012, hamstrings 0.0008). These are engineering priors. They were scaled with the v0.6 local-fatigue base so that even a very high-step day remains non-exercise activity rather than becoming comparable with a resistance session. Normal habitual steps around baseline contribute no additional penalty.
+
+These daily amplitudes are not applied as instantaneous impulses at a calendar boundary. Their distribution through the day is specified in Sec.~\ref{sec:time}.
+
+\section{Temporal conventions and continuity}
+\label{sec:time}
+
+Rhome evolves state in continuous time measured in hours from event timestamps. No state is reset, rebased or recomputed at a calendar boundary. This section fixes the conventions that make that guarantee concrete, because the product specification requires the absence of implausible discontinuities at day boundaries while several inputs arrive as daily aggregates.
+
+\subsection{Event timing}
+
+Set impulses are applied at the timestamp of the set. Where only a session start time and duration are available, sets are distributed evenly across the session interval rather than collapsed onto the start time, so that a three-hour session does not deliver its entire dose at a single instant.
+
+\subsection{Recovery-context windows}
+
+The recovery-context multiplier $\rho$ is derived from a \emph{sleep episode}, not a calendar day. The value computed from the night ending at $\mathrm{sleep\_end}_t$ applies over
+
+\begin{equation}
+\left[\mathrm{sleep\_end}_t,\ \mathrm{sleep\_end}_{t+1}\right),
+\end{equation}
+
+with $\rho=1$ before the first available night.
+
+Anchoring to waking rather than to midnight has two benefits. It removes the midnight discontinuity, and it prevents a night's autonomic data from retroactively modifying the decay of the previous evening's training, which would be a mild form of look-ahead.
+
+$\rho$ is piecewise constant on these intervals. State trajectories remain continuous; only the instantaneous decay \emph{rate} steps, which is the intended behaviour, since the underlying evidence genuinely arrives once per night.
+
+For a decay interval spanning several $\rho$ windows the exponent accumulates as
+
+\begin{equation}
+F_m(t_1)=F_m(t_0)\exp\left[-\frac{\ln 2}{h_m}\sum_k \rho_k\,\Delta t_k\right],
+\end{equation}
+
+where $\Delta t_k$ is the overlap of $[t_0,t_1]$ with window $k$.
+
+\subsection{Distribution of daily activity load}
+
+Step counts are reported as a daily total but are not accumulated at a single instant. The amplitudes of Sec.~\ref{sec:steps} are distributed uniformly across a waking window of 16 hours beginning at $\mathrm{sleep\_end}_t$, giving constant input rates
+
+\begin{equation}
+\dot G_{\mathrm{steps}}=\frac{0.02\,a_t}{16},
+\qquad
+\dot F_{m,\mathrm{steps}}=\frac{\eta_m a_t}{16}
+\qquad\text{per hour.}
+\end{equation}
+
+For a constant input rate $c$ over an interval of length $\Delta$ with constant decay coefficient $\gamma=\rho\ln2/h$, the closed form is
+
+\begin{equation}
+X(t+\Delta)=X(t)e^{-\gamma\Delta}+\frac{c}{\gamma}\left(1-e^{-\gamma\Delta}\right),
+\end{equation}
+
+so no numerical integration is required.
+
+In live operation the daily step total is known only retrospectively. The engine therefore applies the step contribution when the daily row arrives, but timestamps it across the correct waking window, so that historical reconstruction and live operation converge to the same trajectory.
+
+\subsection{Test}
+
+The continuity requirement is tested directly: evaluate state on a fine time grid across midnight on days with no training and no change in wearable availability, and assert that the trajectory is smooth to within numerical tolerance and that no derivative discontinuity occurs at $00{:}00$.
+
+\section{Slow adaptation / training-capacity state}
+
+Rhome keeps acute fatigue separate from a slower adaptation state. For each muscle,
+
+\begin{equation}
+\frac{dA_m}{dt}=-\frac{1}{\tau_A}A_m(t)+k_A\sum_i s_{im}\delta(t-t_i).
+\end{equation}
+
+The v0 prior is
+
+\begin{equation}
+\tau_A=42\ \mathrm{days}.
+\end{equation}
+
+This value is an engineering starting point inspired by the long time constants used in classical fitness--fatigue impulse-response models, not a validated resistance-training muscle-adaptation constant. The fitness--fatigue literature itself cautions that first-order models simplify multivariate physiology and often have limited individual predictive performance \cite{imbach2022}. $\tau_A$ should therefore be learned from longitudinal performance data rather than treated as fixed.
+
+The gain constant is
+
+\begin{equation}
+k_A=0.014.
+\end{equation}
+
+This value is chosen for interpretability rather than fitted. Under a sustained weekly stimulus of $V$ effective-set units delivered at a steady rate, the steady state is $A_m^{*}=k_AV\tau_A/168=6k_AV$; with $k_A=0.014$, $A_m\approx1.0$ corresponds to a maintained twelve effective sets per week, the centre of the operating region described in the data specification. $A_m$ is therefore read as ``training capacity relative to a sustained twelve-set week''.
+
+For user-facing load trends Rhome may additionally maintain independent exponentially weighted traces with short and long time constants, initially 7 and 42 days. These traces are displayed separately; no injury-risk threshold is attached to their ratio \cite{impellizzeri2020}.
+
+\subsection{$A_m$ does not drive performance in v0}
+
+This is a deliberate limitation, recorded explicitly so that it is not mistaken for an omission.
+
+$A_m$ is a \emph{descriptive} state. It is displayed on the load screen and used for block-level trend reporting, but it does not enter $P_e^{\mathrm{exp}}$, and the underlying capacity trend $\bar P_e$ is estimated from observed performance alone (Sec.~\ref{sec:capacity}).
+
+The reason is identifiability. Coupling $A_m$ to $\bar P_e$ requires an adaptation-gain parameter converting effective sets into capacity, and no such parameter is identified by the available evidence. Imposing one would make estimated capacity drift with training \emph{volume} rather than with observed \emph{performance}, which is precisely the failure mode the fitness--fatigue literature warns against \cite{imbach2022}. A model that reports the athlete is stronger because they performed more sets, in the absence of any evidence that they lifted more, is not a model of strength.
+
+Linking the two states is a Phase-3 objective. With two years of longitudinal residuals it becomes possible to ask whether stimulus history carries predictive information about capacity \emph{beyond} what recent observed performance already contains. Until that question is answered empirically, the channels remain separate, and the separation is itself a testable claim: if $A_m$ has no incremental predictive value, v0 loses nothing by excluding it.
+
+\section{Performance model}
+
+\subsection{Observed set performance}
+
+For an exercise $e$, the inferred repetitions-to-failure value $r+q$ and the Nuzzo mapping provide an estimate of the relative load $u$. A set-specific performance-capacity estimate is therefore
+
+\begin{equation}
+\widehat{P}_{e,i}=\frac{w_i^{\mathrm{eff}}}{u_i},
+\end{equation}
+
+where $w_i^{\mathrm{eff}}$ is the relevant exercise load representation.
+
+The observed values are noisy because both RIR estimation and day-to-day performance are noisy.
+
+\subsection{Working sets logged without an effort rating}
+\label{sec:imputed-effort}
+
+A working set recorded with neither RPE nor RIR cannot be transformed: every dose channel depends on proximity to failure. Discarding such a set is the obvious response and is wrong, because the work was performed and the fatigue is real. A model that forgets it under-estimates fatigue, and under-estimating fatigue is the more harmful direction of error for this application.
+
+v0 therefore imputes the effort and marks the set down. Let $\tilde q_e$ be the median logged reserve over the athlete's most recent $30$ rated sets of exercise $e$; where fewer than $5$ exist, the median over all their recent rated sets; where fewer than $5$ of those exist, the prior $q_0=2$ repetitions in reserve, which is the centre of the logged distribution in \texttt{DATA.md} \S9.2.
+
+The imputed set contributes its full dose at $\tilde q_e$ and carries \texttt{u\_confidence} = \texttt{low}, which propagates into dose quality (Sec.~\ref{sec:conf}) and lowers confidence in every state it touches. It is never eligible for performance estimation: an imputed effort supports an estimate of how much fatigue the set caused, and supports nothing at all about what the athlete was capable of. Imputing a dose and inventing a performance observation are different acts, and only the first is defensible.
+
+The trace records the set as imputed, so a displayed number that rests on guessed effort says so.
+
+\subsection{Effective load for bodyweight-involving exercises}
+\label{sec:bw}
+
+For conventional externally loaded exercises $w_i^{\mathrm{eff}}=w_i$. Where body mass forms part of the resistance, the effective system load is
+
+\begin{equation}
+w_i^{\mathrm{eff}}=\beta_e\,\widetilde{BM}(t_i)+w_i,
+\end{equation}
+
+where $\beta_e\in[0,1]$ is the exercise's \texttt{bodyweight\_fraction} and $w_i$ is any added external load, which may be negative for assisted variants.
+
+$\widetilde{BM}$ is the \emph{smoothed} body mass, not the daily scale reading. Daily mass carries water, glycogen and gut-content noise of roughly 0.5--0.9\,kg, which would otherwise inject spurious day-to-day variation directly into estimated performance. v0 uses a centred median over a window of $7$ days, falling back to the most recent available value at the series edge.
+
+v0 fractions:
+
+\begin{center}
+\begin{tabular}{lcl}
+\toprule
+Exercise & $\beta_e$ & Basis \\
+\midrule
+Pull-up / chin-up & 1.00 & Full body mass raised \\
+Weighted dip & 0.95 & Small support contribution from arm position \\
+Push-up & 0.65 & Partial support through the feet \\
+Back extension & 0.55 & Torso, head and arm mass only \\
+Bulgarian split squat & 0.85 & Per working limb; see below \\
+Externally loaded exercises & --- & $w^{\mathrm{eff}}=w$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These fractions are engineering priors based on gross segmental mass distribution. They are not measured force-plate values, and they are stored in \texttt{exercise\_metadata.csv} so that they can be revised without code changes.
+
+\paragraph{Unilateral exercises.} Where an exercise is performed one limb at a time, $w^{\mathrm{eff}}$ is expressed per working limb, and $\widehat P_e$ is likewise a per-limb quantity. The exercise identity must encode the unilateral convention so that per-limb and bilateral capacities are never compared directly.
+
+\paragraph{Missing body mass.} If $\widetilde{BM}$ is unavailable the engine uses the most recent known value; if none exists it uses the configured athlete default and marks the set \texttt{u\_confidence = low}. Body mass is never imputed from population statistics.
+
+\paragraph{Interpretation.} Because $w^{\mathrm{eff}}$ includes body mass, a change in body mass alters estimated performance on these exercises even at unchanged external load. This is intended --- a lighter athlete genuinely expresses greater relative pull-up capacity --- but the interface must present the trend in system-load units and label it as such, so that a period of weight loss is not misread as a strength gain.
+
+\subsection{Expected performance under current fatigue}
+\label{sec:perf}
+
+Let $\bar P_e(t)$ be the estimated underlying capacity (Sec.~\ref{sec:capacity}). Define the exercise-specific local fatigue exposure
+
+\begin{equation}
+F_e(t)=\sum_m \omega_{me}F_m(t).
+\end{equation}
+
+\paragraph{Performance-relevance weights.} $\omega_{me}$ is the exercise's fatigue-contribution vector normalised to unit sum:
+
+\begin{equation}
+\omega_{me}=\frac{c^{F}_{me}}{\sum_{m'}c^{F}_{m'e}},
+\qquad\text{so}\qquad
+\sum_m\omega_{me}=1 .
+\end{equation}
+
+The fatigue vector $c^F$ is used rather than the stimulus vector $c^S$ because performance is limited by fatigue anywhere in the contributing chain, including stabilisers: grip fatigue limits a deadlift even though the grip receives no hypertrophic credit for the set. Normalising to unit sum keeps $F_e$ on the same numerical scale as a single muscle's $F_m$, so that $\lambda_F$ retains a stable interpretation across exercises with different numbers of contributing muscles.
+
+The v0 expected performance is
+
+\begin{equation}
+P_e^{\mathrm{exp}}(t)
+=\bar P_e(t)\exp\left[-\operatorname{clip}\left(
+\lambda_FF_e(t)+\lambda_N\kappa_eN(t)+\lambda_GG(t),\;0,\;0.25\right)\right],
+\end{equation}
+
+with
+
+\begin{equation}
+\lambda_F=0.065,\qquad \lambda_N=0.045,\qquad \lambda_G=0.030.
+\end{equation}
+
+The clip bounds total modelled suppression at approximately $22\%$. It exists for numerical stability under pathological accumulated states and should not bind during ordinary training; if it binds outside a deliberate stress-test scenario, that is a defect to investigate rather than a result to display.
+
+\paragraph{Calibration basis.} These coefficients are engineering priors, but they are not free. They are set so that the model reproduces the following behaviour, which serves as an acceptance criterion for the Phase-2 engine. The bands below were obtained by evaluating the model equations over representative sessions rather than assumed, and any implementation should reproduce them.
+
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+State, evaluated 24\,h after the most recent session & Suppression of $P^{\mathrm{exp}}$ \\
+\midrule
+Fresh; after a deload week & $<1.5\%$ \\
+One ordinary hard session for that muscle & 4--6\% \\
+One failure-heavy session & 5--7\% \\
+Within an ordinary training week (two sessions in 72\,h) & 6--8\% \\
+Within a failure-heavy block & 8--10\% \\
+Peak of a deliberate overload block & 13--16\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Three properties of this table deserve comment.
+
+First, the absolute magnitudes are materially smaller than the acute decrements reported immediately after failure protocols \cite{moran2017}, and deliberately so: $P_e^{\mathrm{exp}}$ predicts performance in a \emph{subsequent training session}, typically 24--72\,h later, not performance measured minutes after the final set.
+
+Second, the failure-versus-ordinary gap at matched volume is modest --- roughly one to two percentage points for a single session --- because it is carried entirely by the ratio $\phi_F(0)/\phi_F(2)=1.35$. What the evidence constrains is the \emph{ordering} and the disproportionality of the fatigue impulse \cite{moran2017}; it does not license a larger separation in next-session performance than the impulse ratio implies. The gap widens with accumulation, which is the expected behaviour.
+
+Third, upper-body suppression runs roughly one percentage point below lower-body for an equivalent session, because $\kappa_e$ and $b_e$ are lower for upper-body movements. This is intended and should not be calibrated away.
+
+The clip at $0.25$ does not bind in any of the above states; the most extreme realistic case reaches approximately $0.16$. If it binds during ordinary training, that indicates a defect rather than a result to display.
+
+\paragraph{Revision from v0.1.} The v0.1 values ($\lambda_F=0.030$, $\lambda_N=0.020$, $\lambda_G=0.015$) yielded approximately $2.4\%$ suppression in the ordinary-session case. That is small relative to the day-to-day stochastic performance variation the simulator generates, which would have left the fatigue states weakly identifiable from observed performance and would have made the residual-driven capacity update insensitive to fatigue state. The revised values are approximately $2.2\times$ larger. All three remain Grade C and are among the first parameters that should be personalised.
+
+\subsection{Estimation of underlying capacity}
+\label{sec:capacity}
+
+$\bar P_x$ must be robust to a single anomalous session and still responsive to
+sustained change. The capacity identity $x$ is the exercise id alone for
+barbell, dumbbell, bodyweight and other portable load scales. For cable and
+machine exercises it is the pair of exercise id and recorded equipment
+context. A stack marked 14 on one machine is not assumed comparable with a
+stack marked 14 elsewhere.
+
+For each eligible set --- \texttt{working} or \texttt{backoff}, with \texttt{u\_confidence} not \texttt{low} --- first remove the model's own estimate of the fatigue acting at that moment, giving a fatigue-corrected capacity observation:
+
+\begin{equation}
+\log\widetilde P_{x,i}
+=\log\widehat P_{e,i}
++\lambda_FF_e(t_i)+\lambda_N\kappa_eN(t_i)+\lambda_GG(t_i).
+\end{equation}
+
+The pre-session projection is scored against the first eligible set of the
+exercise-context. Capacity then learns once from all eligible set evidence in
+that session. The evidence is correlated, so the session target is the median,
+not a sequence of independent updates:
+
+\begin{equation}
+y_{x,s}=\operatorname{median}_{i\in(x,s)}\log\widetilde P_{x,i},
+\qquad r_{x,s}=y_{x,s}-\log\bar P_x.
+\end{equation}
+
+Every eligible set still counts as evidence for observation density and
+confidence, but one exercise-context can produce at most one capacity movement
+per session. This removes the pseudo-replication that previously made a
+four-set session count four times.
+
+\paragraph{Scale-aware Huber influence.} Let $R_x$ contain at most the most
+recent 20 session innovations for the exercise-context. Its robust scale and
+clip are
+
+\begin{equation}
+\sigma_x=\max\left(0.10,\ 1.4826\operatorname{MAD}(R_x)\right),
+\qquad c_x=1.345\sigma_x,
+\end{equation}
+
+where the prior floor $0.10$ applies until at least four session innovations
+exist. The frozen Huber multiplier is $k=1.345$. A bound that adapts to each
+exercise-context's observed scale is less likely to become a permanent
+throttle merely because the exercise is recorded in larger or noisier units.
+
+\paragraph{Learning rates.} The ordinary session rate is $\alpha=0.2063$,
+equivalent to a three-session response half-life. A deliberately standardised
+low-fatigue anchor receives $\alpha_{\mathrm{anchor}}=0.50$, a one-session
+half-life. If the median set evidence has \texttt{medium} relative-intensity
+confidence, $\alpha_{\mathrm{medium}}=0.1591$, a four-session half-life. These
+are session rates, never per-set rates.
+
+\paragraph{Gain schedule.} The rate is scaled while an estimate is young:
+
+\begin{equation}
+\alpha_{x,n}=\min\left(0.50,\ \alpha_x\cdot\max\left(1,\frac{1/n}{0.2063}\right)\right),
+\end{equation}
+
+where $n$ is the number of sessions already incorporated for $x$. The running
+mean term accelerates a young estimate and returns to the chosen base rate by
+the fifth session. During the first two scheduled sessions the $0.50$ cap can
+make an ordinary observation and an anchor equally influential; from the third
+session onward the anchor is again strictly more influential. The cap is
+$0.50$.
+
+\paragraph{Explicit session influence.} Let
+$z_{x,s}=\alpha_{x,n}\operatorname{clip}(r_{x,s},-c_x,c_x)$. The actual update is
+
+\begin{equation}
+\log\bar P_x\leftarrow\log\bar P_x+
+\operatorname{clip}\left(z_{x,s},-\log(1+m_s),\log(1+m_s)\right),
+\label{eq:session-bound}
+\end{equation}
+
+with $m_s=0.021$ for an ordinary session and $m_s=0.033$ for a session
+containing an anchor. The positive movements are therefore bounded at $2.1\%$
+and $3.3\%$ exactly; negative movements are slightly smaller because the
+estimator is symmetric in log space. The cap applies at every maturity. This is
+the mechanism that makes the accuracy--robustness gate in the data
+specification binding rather than aspirational.
+
+\paragraph{Initialisation and context prior.} $\bar P_x$ is initialised from
+the median of the first $3$ eligible observations for the exercise-context.
+When a new cable or machine context appears and another context for the same
+exercise already exists, its log initial value receives a weak prior of $0.25$
+times the latest exercise-level log capacity. The context's own evidence has
+weight 1. Capacity confidence is held low until at least $8$ eligible
+observations exist.
+
+\paragraph{Ordering.} The anti-leakage rule of the data specification is binding here. For every session the engine must, in strict order: (i) compute and persist $P_x^{\mathrm{exp}}$ from the pre-session state; (ii) ingest the session in its recorded order; (iii) compute observed $\widehat P_{e,i}$ and the first-set residual against the persisted value; (iv) only then apply the one session update and any parameter personalisation. Recomputing step (i) after step (ii) invalidates every performance metric in the evaluation suite.
+
+\section{Display transforms}
+\label{sec:display}
+
+Latent fatigue variables are non-negative and need not be artificially bounded. For UI display only, Rhome maps them to 0--100 scales:
+
+\begin{equation}
+D_F(F)=100\left(1-e^{-F}\right),
+\end{equation}
+
+and analogously for $N$ and $G$ after channel-specific scaling if required.
+
+The displayed percentage is an \emph{index}, not a literal statement that a muscle is biologically ``63\% fatigued'' or ``37\% recovered.'' The UI must preserve this distinction in terminology and help text.
+
+\section{Confidence}
+\label{sec:conf}
+
+The product specification requires a confidence indicator on displayed state, and the recovery section requires confidence to fall when wearable data are missing. Confidence in v0 is a bounded, deterministic, decomposable index. It is not a probability.
+
+A single global scalar is inadequate, because the conditions that undermine one channel do not undermine the others. A fortnight without training leaves the fatigue states \emph{highly} certain --- they have decayed to near zero --- while leaving capacity estimates stale. Confidence is therefore reported per channel.
+
+\subsection{Components}
+
+Each component lies in $(0,1]$.
+
+\paragraph{Wearable completeness.} Let $\bar\pi_7$ be the mean fraction of the five recovery inputs (RMSSD, resting HR, total sleep, sleep efficiency, temperature) present over the last seven nights.
+
+\begin{equation}
+C_{\mathrm{wear}}=0.60+0.40\,\bar\pi_7 .
+\end{equation}
+
+Complete data give $1.0$; total absence gives $0.60$ rather than $0$, because the fatigue model is driven principally by training data and remains usable with no wearable input at all.
+
+\paragraph{Baseline maturity.} Baselines are 42-day rolling statistics, so before 42 days of history the $z$-scores are unreliable.
+
+\begin{equation}
+C_{\mathrm{base}}=0.50+0.50\min\!\left(1,\frac{n_{\mathrm{days}}}{42}\right).
+\end{equation}
+
+\paragraph{Dose quality.} Two things degrade the quality of a dose estimate: uncertainty about how hard the set was, and uncertainty about what the exercise costs.
+
+Let $\zeta_i$ be the relative-intensity confidence of set $i$, scoring \texttt{high} as $1.0$, \texttt{medium} as $0.8$ and \texttt{low} as $0.6$; and let $\xi_i$ be its exercise's coefficient quality, scoring \texttt{curated} as $1.0$ and \texttt{derived} as $0.75$ (Sec.~\ref{sec:derived}). Then
+
+\begin{equation}
+C_{\mathrm{dose}}=\frac{\sum_i \sigma_i\,\zeta_i\,\xi_i}{\sum_i \sigma_i},
+\end{equation}
+
+weighting each set by its surviving contribution $\sigma_i$ to the state. A set whose influence has largely decayed should not hold down confidence in the present.
+
+The binding reason distinguishes the two causes, since they call for different remedies: an athlete can log RPE more carefully, but can only fix a derived coefficient by curating the exercise.
+
+\paragraph{Observation density.} For exercise-specific capacity, let $n_e$ be the number of eligible observations in the last 28 days and $\Delta_e$ the hours since the most recent.
+
+\begin{equation}
+C_{\mathrm{obs},e}=\min\!\left(1,\frac{n_e}{8}\right)
+\exp\!\left(-\frac{\max(0,\Delta_e-168)}{504}\right).
+\end{equation}
+
+Density saturates at eight observations. Staleness is forgiven for one week and then decays with a three-week constant.
+
+\paragraph{Capacity maturity.} Density above counts observations in a 28-day window, which is a statement about \emph{recency}. It says nothing about whether the engine has ever seen enough of an exercise to have an opinion, and those are different questions: an athlete returning to an exercise after a year can satisfy the density term within a fortnight while the estimate behind it rests on four observations.
+
+The ablation at Checkpoint 2 measured where the difference bites. The engine's performance prediction does not beat a median-of-the-last-three baseline until roughly $20$ lifetime observations of an exercise exist, and beats it by $7.6\%$ after $30$. Through that whole period capacity confidence read \texttt{high}, because the density term was satisfied and nothing else was watching. A confidence index that reports full confidence throughout the months a model is worse than doing nothing clever is not reporting evidence sufficiency.
+
+Let $m_e$ be the number of eligible observations of exercise $e$ over the athlete's whole record. Then
+
+\begin{equation}
+C_{\mathrm{mat},e}=0.45+0.55\min\!\left(1,\frac{m_e}{25}\right).
+\end{equation}
+
+The floor of $0.45$ is deliberate rather than zero: an exercise seen once still carries information, and the engine's estimate on a new movement is not worthless, only weak. The saturation at $25$ is measured rather than assumed --- it is where the ablation places the crossing, rounded up from $20$ to the point where the advantage is established rather than marginal.
+
+\paragraph{Unexplained autonomic deviation.} Persistent residual after conditioning means the model is missing something it cannot name. Let $R_{14}$ be the root-mean-square of $z^{\ast}_{\mathrm{HRV}}$ and $z^{\ast}_{\mathrm{RHR}}$ over the last fourteen days.
+
+\begin{equation}
+C_{\mathrm{explain}}=\operatorname{clip}\left(\frac{1.5}{\max(1.5,R_{14})},\,0.6,\,1\right).
+\end{equation}
+
+An engine whose recovery context is repeatedly surprised should say so, rather than quietly folding the surprise into $\rho$ as though it were understood.
+
+\paragraph{Fit quality.} Let $\hat\sigma_e$ be the robust standard deviation of the last twenty log residuals for exercise $e$, with reference $\sigma_{\mathrm{ref}}=0.05$.
+
+\begin{equation}
+C_{\mathrm{fit},e}=\operatorname{clip}\!\left(\frac{\sigma_{\mathrm{ref}}}{\max(\hat\sigma_e,\sigma_{\mathrm{ref}})},\,0.4,\,1\right).
+\end{equation}
+
+A model that is not tracking a particular exercise well should say so rather than present a confident estimate.
+
+\subsection{Channel confidences}
+
+\begin{align}
+C_{F},\,C_{N},\,C_{G}&=C_{\mathrm{wear}}\cdot C_{\mathrm{base}}\cdot C_{\mathrm{dose}}\cdot C_{\mathrm{explain}},\\
+C_{P,e}&=C_{\mathrm{obs},e}\cdot C_{\mathrm{fit},e}\cdot C_{\mathrm{mat},e},\\
+C_{\mathrm{proj}}(\Delta)&=C_{F}\exp\!\left(-\frac{\Delta}{336}\right).
+\end{align}
+
+$C_F$ deliberately contains no training-recency term: an absence of training is informative about fatigue, not a gap in the evidence. Projection confidence halves at approximately ten days, so a 72-hour projection retains roughly $80\%$ of current-state confidence and a 7-day projection roughly $65\%$.
+
+\subsection{Display and claim discipline}
+
+Confidence is displayed as a three-band label --- \texttt{high} ($\ge0.75$), \texttt{moderate} ($0.50$--$0.75$), \texttt{limited} ($<0.50$) --- accompanied by the \emph{binding reason}, which is the component with the lowest value. ``Limited: no wearable data for six nights'' is useful to the athlete; a bare number is not.
+
+Confidence must never be presented as the probability that a state estimate is correct. It is an index of evidence sufficiency, and the claim boundaries of the research specification apply to it exactly as they apply to every other displayed quantity.
+
+\section{Explanation trace}
+\label{sec:trace}
+
+Product success criterion 10 requires that every displayed state be auditable. Because every state in this model is a sum of exponentially decaying impulses, exact attribution is available in closed form. The explanation trace is therefore an exact decomposition, not a post-hoc rationalisation.
+
+\subsection{Exact contribution decomposition}
+
+For local fatigue,
+
+\begin{equation}
+F_m(t)=\sum_{i:\,t_i\le t} d_{im}\,\sigma_{im}(t),
+\qquad
+\sigma_{im}(t)=\exp\left[-\frac{\ln2}{h_m}\int_{t_i}^{t}\rho(s)\,ds\right],
+\end{equation}
+
+so the surviving contribution of set $i$ is $d_{im}\sigma_{im}(t)$ and its share of the current state is $d_{im}\sigma_{im}(t)/F_m(t)$. The same decomposition applies to $N$, $G$ and $A_m$. Because it is linear, contributions aggregate exactly to whichever level the interface requires --- set, exercise, session or day --- by summing shares.
+
+\subsection{Trace record}
+
+Every state output carries the following record.
+
+\begin{center}
+\begin{tabular}{lp{0.60\textwidth}}
+\toprule
+Field & Content \\
+\midrule
+\texttt{state\_id} & Channel and subject, e.g.\ \texttt{F.hamstrings} \\
+\texttt{value} & Latent value \\
+\texttt{display\_value} & Value after the transform of Sec.~\ref{sec:display} \\
+\texttt{confidence} & Channel confidence, band, and binding reason \\
+\texttt{contributors} & Ranked list: source reference, impulse at origin, surviving value, share, age in hours \\
+\texttt{modifiers} & Applied modulators and their effect, e.g.\ mean $\rho$ over the window with its component $z$-scores \\
+\texttt{parameters} & Every parameter used, with value, evidence grade and version identifier \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The \texttt{parameters} block is what separates an audit trail from a plausible-sounding explanation. It lets the interface, and any later reviewer, see that a displayed number rests on a specific set of Grade C priors. It is the practical mechanism by which this project's epistemic commitments survive contact with the software, and it is the reason parameters must be referenced by versioned identifier rather than inlined as literals.
+
+\subsection{Natural-language drivers}
+
+The short driver strings on the Today screen are generated deterministically from the trace, never by free generation. The v0 rule is to take the two highest-share contributors and the single modifier with the largest absolute deviation, and render them through fixed templates.
+
+Templates must respect the claim boundaries. Permitted: ``high hamstring fatigue from Romanian deadlift volume yesterday; sleep normal''. Not permitted: any phrasing asserting a measured biological percentage, a diagnosis, or a training recommendation derived from crossing a threshold.
+
+Every driver string must be expandable by the interface into the full trace that produced it.
+
+\section{Projection}
+
+Given current state $\mathbf{x}(t_0)$ and assumed future recovery context $\rho(t)$, Rhome can propagate the no-training state analytically. For local fatigue,
+
+\begin{equation}
+F_m(t_0+\Delta)=F_m(t_0)
+\exp\left[-\frac{\ln2}{h_m}\int_{t_0}^{t_0+\Delta}\rho(s)\,ds\right].
+\end{equation}
+
+If no future wearable data are known, $\rho(s)=1$ is the neutral forecast. Counterfactual workouts are inserted as future impulses at their proposed times.
+
+Projections carry $C_{\mathrm{proj}}(\Delta)$ from Sec.~\ref{sec:conf} and must be displayed with a visibly widening uncertainty representation as the horizon extends. A 7-day projection presented with the same visual authority as the current state would misrepresent what the model knows.
+
+\section{Personalisation}
+
+Once real longitudinal data exist, the following parameters should become athlete specific:
+
+\begin{itemize}
+    \item $h_m$: muscle-specific fatigue half-lives;
+    \item RIR bias and variance by exercise/rep range;
+    \item exercise-specific REPS--\%1RM curves;
+    \item $\lambda_F,\lambda_N,\lambda_G$: performance sensitivity to latent fatigue;
+    \item recovery-context coefficients;
+    \item slow performance/adaptation time constants;
+    \item selected exercise metadata coefficients, including $\beta_e$ and $\kappa_e$;
+    \item capacity-update learning rates $\alpha$, robust-scale prior and Huber multiplier;
+    \item whether $A_m$ carries predictive information about $\bar P_e$ beyond recent observed performance (Sec.~\ref{sec:capacity}).
+\end{itemize}
+
+A hierarchical Bayesian state-space model is a natural later extension because it can retain prior information while estimating individual parameters with uncertainty. The v0 deterministic model should be retained as a transparent baseline.
+
+\section{Simulator versus inference engine}
+
+To avoid an inverse crime, the simulator and estimator must not be algebraic mirrors.
+
+The simulator should:
+
+\begin{itemize}
+    \item use continuous latent ``true'' parameters sampled per athlete/muscle;
+    \item include non-linear fatigue accumulation;
+    \item include stochastic daily shocks;
+    \item include correlated wearable physiology;
+    \item include measurement noise;
+    \item generate imperfect RPE/RIR;
+    \item allow unobserved illness/travel/stress disturbances;
+    \item allow exercise-specific performance noise and learning.
+\end{itemize}
+
+The inference engine sees only the observable tables and uses the equations in this document. The simulator-only latent table is used for evaluation, never as an input to the engine.
+
+\section{Parameter provenance summary}
+
+\begin{longtable}{p{0.26\textwidth}p{0.23\textwidth}p{0.39\textwidth}}
+\toprule
+Parameter / rule & v0 value & Status \\
+\midrule
+\endfirsthead
+\toprule
+Parameter / rule & v0 value & Status \\
+\midrule
+\endhead
+RPE--RIR mapping & RPE 10 $\to$ 0 RIR; RPE 9 $\to$ 1 RIR & Evidence-backed convention \cite{zourdos2016} \\
+RIR observation noise & SD 0.9 reps & Evidence-constrained simulator prior \cite{refalo2024} \\
+REPS--\%1RM & Nuzzo meta-regression lookup & Evidence-backed population prior \cite{nuzzo2024} \\
+Indirect stimulus sets & 0.5 direct-set equivalent & Evidence-constrained \cite{pelland2026} \\
+RIR stimulus multiplier & table in Sec. 6 & Engineering prior constrained by \cite{robinson2024} \\
+Failure-fatigue multiplier & table in Sec. 7 & Engineering prior constrained by recovery studies \cite{moran2017} \\
+Local fatigue half-life & 24--42 h, mean 30 h & Evidence-constrained model prior, not directly measured \cite{moran2017,thomas2018} \\
+Neuromuscular half-life & 24 h & Engineering prior within observed recovery timescale \cite{thomas2018} \\
+Systemic half-life & 30 h & Engineering prior \\
+Recovery multiplier bounds & 0.80--1.15 & Conservative engineering prior informed by HRV/sleep ambiguity \cite{bellenger2016,craven2022} \\
+Slow adaptation time constant & 42 d & Engineering prior inspired by fitness--fatigue models \cite{imbach2022} \\
+ACWR injury threshold & none & Explicitly rejected \cite{impellizzeri2020} \\
+Near-maximal $u$ extension & linear to $(1,1.00)$ & Definitional anchor plus engineering interpolation (v0.2) \\
+High-rep $u$ clip & $u\ge0.50$, no extrapolation & Outside validated domain of \cite{nuzzo2024} (v0.2) \\
+Performance weights $\omega_{me}$ & $c^F$ normalised to unit sum & Engineering prior; stabilisers included because they limit expression (v0.2) \\
+$\lambda_F,\lambda_N,\lambda_G$ & $0.065,\ 0.045,\ 0.030$ & Engineering priors set to behavioural calibration targets; revised from v0.1 \\
+Suppression clip & $0.25$ in the exponent & Numerical-stability guard, not a physiological bound (v0.2) \\
+Local-fatigue curvature & $\gamma=0.25$, cap 4, $d_0=0.06$ & Observable session-position prior, normalised to the v0.5 maximum impulse (v0.6) \\
+Capacity update & session median; $k=1.345$; $\alpha=0.2063$; caps $2.1\%/3.3\%$ & Scale-aware Grade-C estimator constrained by the frozen S11 gate (v0.6) \\
+Equipment-context prior & cable/machine only; weight $0.25$ & Weak hierarchical initialisation; contexts remain separate (v0.6) \\
+Adaptation gain $k_A$ & $0.014$ & Interpretability normalisation: $A_m\approx1$ at twelve sets/week (v0.2) \\
+$A_m\to\bar P_e$ coupling & none in v0 & Deliberate: gain unidentified; Phase-3 question (v0.2) \\
+Bodyweight fractions $\beta_e$ & table in Sec.~\ref{sec:bw} & Engineering priors from segmental mass (v0.2) \\
+Drop-set treatment & full dose, excluded from $\widehat P$ & Nuzzo inversion assumes a non-pre-fatigued set (v0.2) \\
+Confidence index & multiplicative, per channel & Engineering construction; not a probability (v0.2) \\
+Autonomic expectation & $\gamma_{\mathrm{HRV}}=0.30$, $\gamma_{\mathrm{RHR}}=0.25$ & Engineering priors; direction only from \cite{bellenger2016} (v0.4) \\
+Wearables as outputs & not predicted & Deliberate: autonomic variance is largely non-training (v0.4) \\
+Unexplained-deviation penalty & $C_{\mathrm{explain}}$, floor $0.6$ & Engineering prior on confidence, not on $\rho$ (v0.4) \\
+Muscle model groups & 16, coarser than display & Evidence is reported per muscle group, not per region (v0.3) \\
+Muscle mass weights $\mu_m$ & table in Sec.~\ref{sec:derived} & Gross segmental prior; modulates $b_e$, does not drive it (v0.3) \\
+Derived $\kappa_e,b_e$ & equipment, pattern, tags & Engineering derivation; validated against curated library (v0.3) \\
+Derived-coefficient penalty & $\xi=0.75$ & Engineering prior on confidence, not on the dose itself (v0.3) \\
+Non-repetition exercise kinds & recorded, excluded & Relative-intensity mapping is defined on repetitions (v0.3) \\
+\bottomrule
+\end{longtable}
+
+\section{References}
+
+\begin{thebibliography}{99}
+
+\bibitem{bellenger2016}
+Bellenger, C. R., Fuller, J. T., Thomson, R. L., Davison, K., Robertson, E. Y., \& Buckley, J. D. (2016).
+Monitoring athletic training status through autonomic heart rate regulation: a systematic review and meta-analysis.
+\emph{Sports Medicine, 46}, 1461--1486.
+\href{https://doi.org/10.1007/s40279-016-0484-2}{doi:10.1007/s40279-016-0484-2}.
+
+\bibitem{cao2022}
+Cao, R., Azimi, I., Sarhaddi, F., et al. (2022).
+Accuracy assessment of Oura Ring nocturnal heart rate and heart rate variability in comparison with electrocardiography in time and frequency domains: comprehensive analysis.
+\emph{Journal of Medical Internet Research, 24}(1), e27487.
+\href{https://doi.org/10.2196/27487}{doi:10.2196/27487}.
+
+\bibitem{craven2022}
+Craven, J., McCartney, D., Desbrow, B., et al. (2022).
+Effects of acute sleep loss on physical performance: a systematic and meta-analytical review.
+\emph{Sports Medicine, 52}, 2669--2690.
+\href{https://doi.org/10.1007/s40279-022-01706-y}{doi:10.1007/s40279-022-01706-y}.
+
+\bibitem{imbach2022}
+Imbach, F., Sutton-Charani, N., Montmain, J., Candau, R., \& Perrey, S. (2022).
+The use of fitness-fatigue models for sport performance modelling: conceptual issues and contributions from machine-learning.
+\emph{Sports Medicine - Open, 8}, 29.
+\href{https://doi.org/10.1186/s40798-022-00426-x}{doi:10.1186/s40798-022-00426-x}.
+
+\bibitem{impellizzeri2020}
+Impellizzeri, F. M., Tenan, M. S., Kempton, T., Novak, A., \& Coutts, A. J. (2020).
+Acute:Chronic Workload Ratio: conceptual issues and fundamental pitfalls.
+\emph{International Journal of Sports Physiology and Performance, 15}, 907--913.
+\href{https://doi.org/10.1123/ijspp.2019-0864}{doi:10.1123/ijspp.2019-0864}.
+
+\bibitem{moran2017}
+Mor\'an-Navarro, R., P\'erez, C. E., Mora-Rodr\'iguez, R., et al. (2017).
+Time course of recovery following resistance training leading or not to failure.
+\emph{European Journal of Applied Physiology, 117}, 2387--2399.
+\href{https://doi.org/10.1007/s00421-017-3725-7}{doi:10.1007/s00421-017-3725-7}.
+
+\bibitem{nuzzo2024}
+Nuzzo, J. L., Pinto, M. D., Nosaka, K., \& Steele, J. (2024).
+Maximal number of repetitions at percentages of the one repetition maximum: a meta-regression and moderator analysis of sex, age, training status, and exercise.
+\emph{Sports Medicine, 54}, 303--321.
+\href{https://doi.org/10.1007/s40279-023-01937-7}{doi:10.1007/s40279-023-01937-7}.
+
+\bibitem{pelland2026}
+Pelland, J. C., Remmert, J. F., Robinson, Z. P., Hinson, S. R., \& Zourdos, M. C. (2026).
+The resistance training dose response: meta-regressions exploring the effects of weekly volume and frequency on muscle hypertrophy and strength gains.
+\emph{Sports Medicine, 56}, 481--505.
+\href{https://doi.org/10.1007/s40279-025-02344-w}{doi:10.1007/s40279-025-02344-w}.
+
+\bibitem{refalo2024}
+Refalo, M. C., Remmert, J. F., Pelland, J. C., et al. (2024).
+Accuracy of intraset repetitions-in-reserve predictions during the bench press exercise in resistance-trained male and female subjects.
+\emph{Journal of Strength and Conditioning Research, 38}, e78--e85.
+\href{https://doi.org/10.1519/JSC.0000000000004653}{doi:10.1519/JSC.0000000000004653}.
+
+\bibitem{robinson2024}
+Robinson, Z. P., Pelland, J. C., Remmert, J. F., et al. (2024).
+Exploring the dose-response relationship between estimated resistance training proximity to failure, strength gain, and muscle hypertrophy: a series of meta-regressions.
+\emph{Sports Medicine, 54}, 2209--2231.
+\href{https://doi.org/10.1007/s40279-024-02069-2}{doi:10.1007/s40279-024-02069-2}.
+
+\bibitem{svensson2024}
+Svensson, T., Madhawa, K., Hoang, N. T., Chung, U.-I., \& Kishi Svensson, A. (2024).
+Validity and reliability of the Oura Ring Generation 3 with Oura Sleep Staging Algorithm 2.0 compared with multi-night ambulatory polysomnography.
+\emph{Sleep Medicine, 115}, 251--263.
+\href{https://doi.org/10.1016/j.sleep.2024.01.020}{doi:10.1016/j.sleep.2024.01.020}.
+
+\bibitem{thomas2018}
+Thomas, K., Brownstein, C. G., Dent, J., Parker, P., Goodall, S., \& Howatson, G. (2018).
+Neuromuscular fatigue and recovery after heavy resistance, jump, and sprint training.
+\emph{Medicine \& Science in Sports \& Exercise, 50}.
+\href{https://doi.org/10.1249/MSS.0000000000001733}{doi:10.1249/MSS.0000000000001733}.
+
+\bibitem{zourdos2016}
+Zourdos, M. C., Klemp, A., Dolan, C., et al. (2016).
+Novel resistance training-specific rating of perceived exertion scale measuring repetitions in reserve.
+\emph{Journal of Strength and Conditioning Research, 30}, 267--275.
+\href{https://doi.org/10.1519/JSC.0000000000001049}{doi:10.1519/JSC.0000000000001049}.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,41 @@
+
+Before: holdout opened once, on 2026-08-23
+After:  holdout opened 2 times, first on 2026-08-23. Results from a re-opened holdout are a weaker claim and must be reported as such.
+
+Alignment: fitted on development, digest 6e501cef92d0ad9d — identical: True
+
+                                                development      HOLDOUT
+  ----------------------------------------------------------------------
+  STATE RECONSTRUCTION
+      local_fatigue correlation                      +0.949       +0.955
+      local_fatigue vs set counter                   +0.911       +0.938
+      neuromuscular correlation                      +0.956       +0.959
+      neuromuscular vs set counter                   +0.873       +0.900
+      systemic correlation                           +0.973       +0.981
+      systemic vs set counter                        +0.945       +0.964
+      per-muscle mean                                +0.966       +0.968
+      per-muscle, set counter                        +0.520       +0.592
+      recovery multiplier clipped                     11.9%        11.9%
+
+  PERFORMANCE
+      one-step-ahead MAE                             0.0425       0.0428
+      residual bias                                 +0.0063      -0.0160
+      residual autocorrelation                       +0.200       +0.121
+      scored sets                                      2083          754
+
+  ABLATION LADDER, 20+ prior observations
+      engine MAE                                     0.0397       0.0424
+      mean of last 5 MAE                             0.0394       0.0444
+                                                              (tie)
+      median of last 3 MAE                           0.0424       0.0467
+                                                              (engine better)
+      last observation MAE                           0.0491       0.0576
+                                                              (engine better)
+
+  CONFIDENCE AND TRACE
+      binding reason always lowest                        1            1
+      high before competitive                         25.9%        29.4%
+      worst share error                            1.20e-12     1.60e-12
+      driver boundary violations                          0            0
+
+  holdout opened 2 times, first on 2026-08-23. Results from a re-opened holdout are a weaker claim and must be reported as such.

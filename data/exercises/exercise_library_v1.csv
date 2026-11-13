@@ -1,0 +1,1075 @@
+exercise_id,name,movement_pattern,equipment,exercise_kind,primary_muscles,secondary_muscles,stabiliser_muscles,compoundness,systemic_cost,bodyweight_fraction,axial_load,eccentric_demand,nuzzo_curve,unilateral,coefficient_source
+barbell_bench_press,Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+paused_barbell_bench_press,Paused Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.15,0.60,bench,false,curated
+touch_and_go_barbell_bench_press,Touch-and-Go Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+competition_bench_press,Competition Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+close_grip_bench_press,Close-Grip Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.15,0.60,bench,false,curated
+wide_grip_bench_press,Wide-Grip Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+larsen_press,Larsen Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,general,false,curated
+feet_up_bench_press,Feet-Up Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+spoto_press,Spoto Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.15,0.60,general,false,curated
+tempo_bench_press,Tempo Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.58,,0.15,0.80,bench,false,curated
+pin_bench_press,Pin Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+dead_bench_press,Dead Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+board_press,Board Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,general,false,curated
+2_board_press,2-Board Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,general,false,curated
+3_board_press,3-Board Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,general,false,curated
+reverse_grip_bench_press,Reverse-Grip Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+guillotine_bench_press,Guillotine Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+cambered_bar_bench_press,Cambered Bar Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+swiss_bar_bench_press,Swiss Bar Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+football_bar_bench_press,Football Bar Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+buffalo_bar_bench_press,Buffalo Bar Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+slingshot_bench_press,Slingshot Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+band_resisted_bench_press,Band-Resisted Bench Press,horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,,0.08,0.60,general,false,curated
+chain_bench_press,Chain Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,bench,false,curated
+reverse_band_bench_press,Reverse-Band Bench Press,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,,0.08,0.60,general,false,curated
+floor_press,Floor Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.52,general,false,curated
+paused_floor_press,Paused Floor Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.15,0.52,general,false,curated
+close_grip_floor_press,Close-Grip Floor Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.15,0.52,general,false,curated
+wide_grip_floor_press,Wide-Grip Floor Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.52,general,false,curated
+15_incline_barbell_bench_press,15° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.20,0.60,general,false,curated
+paused_15_incline_barbell_bench_press,Paused 15° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.20,0.60,general,false,curated
+close_grip_15_incline_barbell_bench_press,Close-Grip 15° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.20,0.60,general,false,curated
+30_incline_barbell_bench_press,30° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.20,0.60,general,false,curated
+paused_30_incline_barbell_bench_press,Paused 30° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.20,0.60,general,false,curated
+close_grip_30_incline_barbell_bench_press,Close-Grip 30° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.20,0.60,general,false,curated
+45_incline_barbell_bench_press,45° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.20,0.60,general,false,curated
+paused_45_incline_barbell_bench_press,Paused 45° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.20,0.60,general,false,curated
+close_grip_45_incline_barbell_bench_press,Close-Grip 45° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.20,0.60,general,false,curated
+60_incline_barbell_bench_press,60° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.20,0.60,general,false,curated
+paused_60_incline_barbell_bench_press,Paused 60° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.20,0.60,general,false,curated
+close_grip_60_incline_barbell_bench_press,Close-Grip 60° Incline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.20,0.60,general,false,curated
+decline_barbell_bench_press,Decline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.55,,0.15,0.60,general,false,curated
+paused_decline_barbell_bench_press,Paused Decline Barbell Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.78,0.57,,0.15,0.60,general,false,curated
+close_grip_decline_bench_press,Close-Grip Decline Bench Press,horizontal_press,barbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.80,0.57,,0.15,0.60,general,false,curated
+flat_dumbbell_bench_press,Flat Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+flat_neutral_grip_dumbbell_bench_press,Flat Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+flat_semi_pronated_dumbbell_bench_press,Flat Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+flat_alternating_dumbbell_bench_press,Flat Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+flat_single_arm_dumbbell_bench_press,Flat Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.15,0.65,general,true,curated
+15_incline_dumbbell_bench_press,15° Incline Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+15_incline_neutral_grip_dumbbell_bench_press,15° Incline Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+15_incline_semi_pronated_dumbbell_bench_press,15° Incline Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+15_incline_alternating_dumbbell_bench_press,15° Incline Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.25,0.65,general,true,curated
+15_incline_single_arm_dumbbell_bench_press,15° Incline Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+30_incline_dumbbell_bench_press,30° Incline Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+30_incline_neutral_grip_dumbbell_bench_press,30° Incline Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+30_incline_semi_pronated_dumbbell_bench_press,30° Incline Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+30_incline_alternating_dumbbell_bench_press,30° Incline Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.25,0.65,general,true,curated
+30_incline_single_arm_dumbbell_bench_press,30° Incline Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+45_incline_dumbbell_bench_press,45° Incline Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+45_incline_neutral_grip_dumbbell_bench_press,45° Incline Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+45_incline_semi_pronated_dumbbell_bench_press,45° Incline Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+45_incline_alternating_dumbbell_bench_press,45° Incline Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.25,0.65,general,true,curated
+45_incline_single_arm_dumbbell_bench_press,45° Incline Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+60_incline_dumbbell_bench_press,60° Incline Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+60_incline_neutral_grip_dumbbell_bench_press,60° Incline Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+60_incline_semi_pronated_dumbbell_bench_press,60° Incline Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.25,0.65,general,false,curated
+60_incline_alternating_dumbbell_bench_press,60° Incline Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.25,0.65,general,true,curated
+60_incline_single_arm_dumbbell_bench_press,60° Incline Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+decline_dumbbell_bench_press,Decline Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+decline_neutral_grip_dumbbell_bench_press,Decline Neutral-Grip Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+decline_semi_pronated_dumbbell_bench_press,Decline Semi-Pronated Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+decline_alternating_dumbbell_bench_press,Decline Alternating Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.20,0.65,general,true,curated
+decline_single_arm_dumbbell_bench_press,Decline Single-Arm Dumbbell Bench Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.15,0.65,general,true,curated
+dumbbell_squeeze_press,Dumbbell Squeeze Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.65,general,false,curated
+dumbbell_floor_press,Dumbbell Floor Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.57,general,false,curated
+neutral_grip_dumbbell_floor_press,Neutral-Grip Dumbbell Floor Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.50,,0.20,0.57,general,false,curated
+single_arm_dumbbell_floor_press,Single-Arm Dumbbell Floor Press,horizontal_press,dumbbell,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.68,0.53,,0.15,0.57,general,true,curated
+smith_machine_flat_bench_press,Smith Machine Flat Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.56,0.42,,0.08,0.52,general,false,curated
+smith_machine_flat_close_grip_bench_press,Smith Machine Flat Close-Grip Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.58,0.44,,0.08,0.52,general,false,curated
+smith_machine_low_incline_bench_press,Smith Machine Low-Incline Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.56,0.42,,0.13,0.52,general,false,curated
+smith_machine_low_incline_close_grip_bench_press,Smith Machine Low-Incline Close-Grip Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.58,0.44,,0.13,0.52,general,false,curated
+smith_machine_30_incline_bench_press,Smith Machine 30° Incline Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.56,0.42,,0.13,0.52,general,false,curated
+smith_machine_30_incline_close_grip_bench_press,Smith Machine 30° Incline Close-Grip Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.58,0.44,,0.13,0.52,general,false,curated
+smith_machine_45_incline_bench_press,Smith Machine 45° Incline Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.56,0.42,,0.13,0.52,general,false,curated
+smith_machine_45_incline_close_grip_bench_press,Smith Machine 45° Incline Close-Grip Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.58,0.44,,0.13,0.52,general,false,curated
+smith_machine_decline_bench_press,Smith Machine Decline Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.56,0.42,,0.08,0.52,general,false,curated
+smith_machine_decline_close_grip_bench_press,Smith Machine Decline Close-Grip Bench Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.58,0.44,,0.08,0.52,general,false,curated
+selectorized_chest_press,Selectorized Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+plate_loaded_chest_press,Plate-Loaded Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+converging_chest_press,Converging Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+iso_lateral_chest_press,Iso-Lateral Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+single_arm_chest_press_machine,Single-Arm Chest Press Machine,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.39,,0.00,0.52,general,true,curated
+hammer_strength_chest_press,Hammer Strength Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+lever_chest_press,Lever Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+cable_chest_press,Cable Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+single_arm_cable_chest_press,Single-Arm Cable Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.39,,0.00,0.52,general,true,curated
+selectorized_incline_chest_press,Selectorized Incline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.10,0.52,general,false,curated
+plate_loaded_incline_chest_press,Plate-Loaded Incline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.10,0.52,general,false,curated
+converging_incline_chest_press,Converging Incline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.10,0.52,general,false,curated
+iso_lateral_incline_chest_press,Iso-Lateral Incline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.10,0.52,general,false,curated
+single_arm_incline_machine_press,Single-Arm Incline Machine Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.39,,0.05,0.52,general,true,curated
+hammer_strength_incline_press,Hammer Strength Incline Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.10,0.52,general,false,curated
+low_to_high_cable_chest_press,Low-to-High Cable Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+selectorized_decline_chest_press,Selectorized Decline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+plate_loaded_decline_chest_press,Plate-Loaded Decline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+converging_decline_chest_press,Converging Decline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+iso_lateral_decline_chest_press,Iso-Lateral Decline Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+hammer_strength_decline_press,Hammer Strength Decline Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+high_to_low_cable_chest_press,High-to-Low Cable Chest Press,horizontal_press,cable,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.48,0.36,,0.05,0.52,general,false,curated
+flat_dumbbell_fly,Flat Dumbbell Fly,isolation,dumbbell,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+incline_dumbbell_fly,Incline Dumbbell Fly,isolation,dumbbell,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+decline_dumbbell_fly,Decline Dumbbell Fly,isolation,dumbbell,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_dumbbell_fly,Single-Arm Dumbbell Fly,isolation,dumbbell,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+cable_fly,Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+standing_cable_fly,Standing Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+seated_cable_fly,Seated Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+lying_cable_fly,Lying Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_cable_fly,Single-Arm Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+low_to_high_cable_fly,Low-to-High Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+high_to_low_cable_fly,High-to-Low Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+mid_cable_fly,Mid Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+cross_body_cable_fly,Cross-Body Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+cable_fly_from_behind_body,Cable Fly from Behind Body,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_low_to_high_cable_fly,Single-Arm Low-to-High Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+single_arm_high_to_low_cable_fly,Single-Arm High-to-Low Cable Fly,isolation,cable,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+pec_deck_fly,Pec Deck Fly,isolation,machine,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_pec_deck_fly,Single-Arm Pec Deck Fly,isolation,machine,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+machine_fly,Machine Fly,isolation,machine,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+plate_loaded_fly,Plate-Loaded Fly,isolation,machine,weighted_reps,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+ring_fly,Ring Fly,isolation,bodyweight,reps_only,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+suspension_trainer_fly,Suspension-Trainer Fly,isolation,bodyweight,reps_only,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+band_fly,Band Fly,isolation,bodyweight,reps_only,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_band_fly,Single-Arm Band Fly,isolation,bodyweight,reps_only,chest,anterior_delts,biceps|rotator_cuff|serratus,0.20,0.27,,0.00,0.50,general,true,curated
+push_up,Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+weighted_push_up,Weighted Push-Up,horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+band_resisted_push_up,Band-Resisted Push-Up,horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+deficit_push_up,Deficit Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+deep_handle_push_up,Deep Handle Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+ring_push_up,Ring Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+suspension_trainer_push_up,Suspension-Trainer Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+incline_push_up,Incline Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.50,0.13,0.60,general,false,curated
+decline_push_up,Decline Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.75,0.08,0.60,general,false,curated
+feet_elevated_push_up,Feet-Elevated Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.75,0.08,0.60,general,false,curated
+close_grip_push_up,Close-Grip Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.64,0.44,0.65,0.08,0.60,general,false,curated
+diamond_push_up,Diamond Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+wide_grip_push_up,Wide-Grip Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+archer_push_up,Archer Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+typewriter_push_up,Typewriter Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+one_arm_push_up,One-Arm Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.45,0.65,0.08,0.60,general,true,curated
+assisted_one_arm_push_up,Assisted One-Arm Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.45,0.65,0.08,0.60,general,true,curated
+staggered_push_up,Staggered Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+pseudo_planche_push_up,Pseudo-Planche Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+spoto_push_up,Spoto Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.44,0.65,0.08,0.60,general,false,curated
+paused_push_up,Paused Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.44,0.65,0.08,0.60,general,false,curated
+tempo_push_up,Tempo Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.45,0.65,0.08,0.80,general,false,curated
+explosive_push_up,Explosive Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+clap_push_up,Clap Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+medicine_ball_push_up,Medicine-Ball Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+alternating_medicine_ball_push_up,Alternating Medicine-Ball Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.45,0.65,0.08,0.60,general,true,curated
+smith_bar_push_up,Smith-Bar Push-Up,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.62,0.42,0.65,0.08,0.60,general,false,curated
+chest_dip,Chest Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+weighted_chest_dip,Weighted Chest Dip,horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+assisted_chest_dip,Assisted Chest Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+ring_dip,Ring Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+weighted_ring_dip,Weighted Ring Dip,horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+machine_dip_chest_biased,Machine Dip (Chest-Biased),horizontal_press,bodyweight,weighted_reps,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+forward_lean_parallel_bar_dip,Forward-Lean Parallel-Bar Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+deep_chest_dip,Deep Chest Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+band_assisted_chest_dip,Band-Assisted Chest Dip,horizontal_press,bodyweight,reps_only,chest,triceps|anterior_delts,upper_back|rotator_cuff|core,0.72,0.52,0.95,0.20,0.70,general,false,curated
+pull_up,Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+weighted_pull_up,Weighted Pull-Up,vertical_pull,bodyweight,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+assisted_pull_up,Assisted Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+neutral_grip_pull_up,Neutral-Grip Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+wide_grip_pull_up,Wide-Grip Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+close_grip_pull_up,Close-Grip Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+underhand_chin_up,Underhand Chin-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+weighted_chin_up,Weighted Chin-Up,vertical_pull,bodyweight,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+assisted_chin_up,Assisted Chin-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+mixed_grip_pull_up,Mixed-Grip Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+ring_pull_up,Ring Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+ring_chin_up,Ring Chin-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+sternum_pull_up,Sternum Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+chest_to_bar_pull_up,Chest-to-Bar Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+commando_pull_up,Commando Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+archer_pull_up,Archer Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+typewriter_pull_up,Typewriter Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+one_arm_pull_up,One-Arm Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.58,1.00,0.10,0.60,general,true,curated
+assisted_one_arm_pull_up,Assisted One-Arm Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.58,1.00,0.10,0.60,general,true,curated
+band_assisted_pull_up,Band-Assisted Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+paused_pull_up,Paused Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.60,general,false,curated
+tempo_pull_up,Tempo Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.68,general,false,curated
+eccentric_pull_up,Eccentric Pull-Up,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,1.00,0.10,0.75,general,false,curated
+wide_grip_lat_pulldown,Wide-Grip Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+medium_grip_lat_pulldown,Medium-Grip Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+close_grip_lat_pulldown,Close-Grip Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+neutral_grip_lat_pulldown,Neutral-Grip Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+supinated_lat_pulldown,Supinated Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+pronated_lat_pulldown,Pronated Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+v_bar_lat_pulldown,V-Bar Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+mag_grip_lat_pulldown,MAG-Grip Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+single_arm_lat_pulldown,Single-Arm Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.48,,0.00,0.52,general,true,curated
+half_kneeling_single_arm_lat_pulldown,Half-Kneeling Single-Arm Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.48,,0.00,0.52,general,true,curated
+kneeling_lat_pulldown,Kneeling Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+behind_the_neck_lat_pulldown,Behind-the-Neck Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+chest_supported_lat_pulldown,Chest-Supported Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+lean_back_lat_pulldown,Lean-Back Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+straight_bar_lat_pulldown,Straight-Bar Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+rope_lat_pulldown,Rope Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+plate_loaded_lat_pulldown,Plate-Loaded Lat Pulldown,vertical_pull,machine,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.50,0.45,,0.05,0.50,general,false,curated
+iso_lateral_lat_pulldown,Iso-Lateral Lat Pulldown,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+single_arm_plate_loaded_pulldown,Single-Arm Plate-Loaded Pulldown,vertical_pull,machine,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.50,0.48,,0.00,0.50,general,true,curated
+machine_pulldown,Machine Pulldown,vertical_pull,machine,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.50,0.45,,0.05,0.50,general,false,curated
+underhand_machine_pulldown,Underhand Machine Pulldown,vertical_pull,machine,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.50,0.45,,0.05,0.50,general,false,curated
+high_row_pulldown_hybrid,High Row / Pulldown Hybrid,vertical_pull,cable,weighted_reps,lats,biceps|upper_back,forearms|rotator_cuff|core,0.52,0.45,,0.05,0.52,general,false,curated
+band_lat_pulldown,Band Lat Pulldown,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.55,,0.10,0.60,general,false,curated
+single_arm_band_pulldown,Single-Arm Band Pulldown,vertical_pull,bodyweight,reps_only,lats,biceps|upper_back,forearms|rotator_cuff|core,0.72,0.58,,0.05,0.60,general,true,curated
+bent_over_barbell_row,Bent-Over Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+pendlay_row,Pendlay Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+underhand_barbell_row,Underhand Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+wide_grip_barbell_row,Wide-Grip Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+close_grip_barbell_row,Close-Grip Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+snatch_grip_barbell_row,Snatch-Grip Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+dead_stop_barbell_row,Dead-Stop Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+paused_barbell_row,Paused Barbell Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+seal_row,Seal Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.56,,0.20,0.60,general,false,curated
+barbell_chest_supported_row,Barbell Chest-Supported Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.56,,0.20,0.60,general,false,curated
+t_bar_row,T-Bar Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+chest_supported_t_bar_row,Chest-Supported T-Bar Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.56,,0.20,0.60,general,false,curated
+landmine_row,Landmine Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+meadows_row,Meadows Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.65,,0.55,0.60,general,true,curated
+two_arm_landmine_row,Two-Arm Landmine Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+dumbbell_row,Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.52,,0.28,0.58,general,false,curated
+one_arm_dumbbell_row,One-Arm Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.55,,0.28,0.58,general,true,curated
+bench_supported_one_arm_dumbbell_row,Bench-Supported One-Arm Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.55,,0.28,0.58,general,true,curated
+kroc_row,Kroc Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+chest_supported_dumbbell_row,Chest-Supported Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.46,,0.00,0.58,general,false,curated
+incline_bench_dumbbell_row,Incline Bench Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.52,,0.28,0.58,general,false,curated
+seal_dumbbell_row,Seal Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.52,,0.28,0.58,general,false,curated
+batwing_row,Batwing Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+renegade_row,Renegade Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.72,,0.70,0.60,general,false,curated
+alternating_dumbbell_row,Alternating Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.55,,0.28,0.58,general,true,curated
+tripod_dumbbell_row,Tripod Dumbbell Row,horizontal_pull,dumbbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.62,0.52,,0.28,0.58,general,false,curated
+seated_cable_row,Seated Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+close_grip_seated_cable_row,Close-Grip Seated Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+wide_grip_seated_cable_row,Wide-Grip Seated Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+neutral_grip_cable_row,Neutral-Grip Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+underhand_cable_row,Underhand Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+overhand_cable_row,Overhand Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+rope_cable_row,Rope Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+single_arm_cable_row,Single-Arm Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.49,,0.05,0.45,general,true,curated
+cross_body_cable_row,Cross-Body Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+high_cable_row,High Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+low_cable_row,Low Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+half_kneeling_cable_row,Half-Kneeling Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.46,,0.10,0.45,general,false,curated
+chest_supported_cable_row,Chest-Supported Cable Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.40,,0.00,0.45,general,false,curated
+machine_row,Machine Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+chest_supported_machine_row,Chest-Supported Machine Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.41,,0.00,0.50,general,false,curated
+plate_loaded_row,Plate-Loaded Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+iso_lateral_row,Iso-Lateral Row,horizontal_pull,barbell,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.72,0.62,,0.55,0.60,general,false,curated
+single_arm_machine_row,Single-Arm Machine Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+hammer_strength_row,Hammer Strength Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+hammer_strength_low_row,Hammer Strength Low Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+hammer_strength_high_row,Hammer Strength High Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+selectorized_row,Selectorized Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+smith_machine_bent_over_row,Smith Machine Bent-Over Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+inverted_row,Inverted Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+weighted_inverted_row,Weighted Inverted Row,horizontal_pull,bodyweight,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+ring_row,Ring Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+feet_elevated_inverted_row,Feet-Elevated Inverted Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+underhand_inverted_row,Underhand Inverted Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+wide_grip_inverted_row,Wide-Grip Inverted Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,0.65,0.10,0.55,general,false,curated
+band_row,Band Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.45,,0.10,0.55,general,false,curated
+single_arm_band_row,Single-Arm Band Row,horizontal_pull,bodyweight,reps_only,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.55,0.48,,0.05,0.55,general,true,curated
+chest_supported_underhand_machine_row,Chest-Supported Underhand Machine Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.41,,0.00,0.50,general,false,curated
+chest_supported_wide_grip_machine_row,Chest-Supported Wide-Grip Machine Row,horizontal_pull,machine,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.52,0.41,,0.00,0.50,general,false,curated
+single_arm_high_cable_lat_row,Single-Arm High Cable Lat Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.49,,0.05,0.45,general,true,curated
+single_arm_low_cable_lat_row,Single-Arm Low Cable Lat Row,horizontal_pull,cable,weighted_reps,upper_back|lats,biceps|posterior_delts,forearms|spinal_erectors|core|rotator_cuff,0.48,0.49,,0.05,0.45,general,true,curated
+straight_arm_cable_pulldown,Straight-Arm Cable Pulldown,isolation,cable,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+rope_straight_arm_pulldown,Rope Straight-Arm Pulldown,isolation,cable,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+single_arm_straight_arm_pulldown,Single-Arm Straight-Arm Pulldown,isolation,dumbbell,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.33,,0.00,0.60,general,true,curated
+kneeling_straight_arm_pulldown,Kneeling Straight-Arm Pulldown,isolation,dumbbell,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+half_kneeling_straight_arm_pulldown,Half-Kneeling Straight-Arm Pulldown,isolation,dumbbell,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+cross_bench_cable_pullover,Cross-Bench Cable Pullover,isolation,cable,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+cable_pullover,Cable Pullover,isolation,cable,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+single_arm_cable_pullover,Single-Arm Cable Pullover,isolation,cable,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.33,,0.00,0.60,general,true,curated
+dumbbell_pullover_lat_biased,Dumbbell Pullover (Lat-Biased),isolation,dumbbell,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+machine_pullover_lat_biased,Machine Pullover (Lat-Biased),isolation,machine,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+nautilus_pullover,Nautilus Pullover,isolation,machine,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+plate_loaded_pullover,Plate-Loaded Pullover,isolation,machine,weighted_reps,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+band_straight_arm_pulldown,Band Straight-Arm Pulldown,isolation,bodyweight,reps_only,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.30,,0.05,0.60,general,false,curated
+single_arm_band_pulldown_straight_arm,Single-Arm Band Pulldown (Straight-Arm),isolation,bodyweight,reps_only,lats,chest|triceps,serratus|core|rotator_cuff,0.28,0.33,,0.00,0.60,general,true,curated
+cable_rear_delt_row,Cable Rear-Delt Row,horizontal_pull,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.48,0.46,,0.10,0.45,general,false,curated
+wide_grip_cable_rear_delt_row,Wide-Grip Cable Rear-Delt Row,horizontal_pull,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.48,0.46,,0.10,0.45,general,false,curated
+chest_supported_rear_delt_row,Chest-Supported Rear-Delt Row,horizontal_pull,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.62,0.46,,0.00,0.58,general,false,curated
+dumbbell_rear_delt_row,Dumbbell Rear-Delt Row,horizontal_pull,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.62,0.52,,0.28,0.58,general,false,curated
+machine_rear_delt_row,Machine Rear-Delt Row,horizontal_pull,machine,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.52,0.47,,0.00,0.50,general,false,curated
+reverse_pec_deck,Reverse Pec Deck,isolation,machine,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.25,,0.00,0.45,general,false,curated
+single_arm_reverse_pec_deck,Single-Arm Reverse Pec Deck,isolation,machine,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.28,,0.00,0.45,general,true,curated
+cable_reverse_fly,Cable Reverse Fly,isolation,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.25,,0.00,0.45,general,false,curated
+single_arm_cable_reverse_fly,Single-Arm Cable Reverse Fly,isolation,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.28,,0.00,0.45,general,true,curated
+bent_over_dumbbell_reverse_fly,Bent-Over Dumbbell Reverse Fly,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.25,,0.00,0.45,general,false,curated
+chest_supported_dumbbell_reverse_fly,Chest-Supported Dumbbell Reverse Fly,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.25,,0.00,0.45,general,false,curated
+prone_y_raise,Prone Y-Raise,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.22,0.24,,0.05,0.50,general,false,curated
+prone_t_raise,Prone T-Raise,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+prone_w_raise,Prone W-Raise,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+cable_y_raise,Cable Y-Raise,isolation,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.22,0.24,,0.05,0.50,general,false,curated
+cable_t_raise,Cable T-Raise,isolation,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+face_pull,Face Pull,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+rope_face_pull,Rope Face Pull,isolation,cable,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+face_pull_with_external_rotation,Face Pull with External Rotation,isolation,dumbbell,weighted_reps,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+band_face_pull,Band Face Pull,isolation,bodyweight,reps_only,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+band_pull_apart,Band Pull-Apart,isolation,bodyweight,reps_only,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+overhand_band_pull_apart,Overhand Band Pull-Apart,isolation,bodyweight,reps_only,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+underhand_band_pull_apart,Underhand Band Pull-Apart,isolation,bodyweight,reps_only,posterior_delts|upper_back,rotator_cuff,forearms|core,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_shrug,Barbell Shrug,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+behind_the_back_barbell_shrug,Behind-the-Back Barbell Shrug,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+snatch_grip_barbell_shrug,Snatch-Grip Barbell Shrug,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+dumbbell_shrug,Dumbbell Shrug,isolation,dumbbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+single_arm_dumbbell_shrug,Single-Arm Dumbbell Shrug,isolation,dumbbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.35,,0.25,0.50,general,true,curated
+incline_dumbbell_shrug,Incline Dumbbell Shrug,isolation,dumbbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+chest_supported_dumbbell_shrug,Chest-Supported Dumbbell Shrug,isolation,dumbbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+trap_bar_shrug,Trap-Bar Shrug,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+smith_machine_shrug,Smith Machine Shrug,isolation,machine,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+behind_the_back_smith_shrug,Behind-the-Back Smith Shrug,isolation,machine,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+machine_shrug,Machine Shrug,isolation,machine,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+plate_loaded_shrug,Plate-Loaded Shrug,isolation,machine,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+cable_shrug,Cable Shrug,isolation,cable,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+single_arm_cable_shrug,Single-Arm Cable Shrug,isolation,cable,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.35,,0.25,0.50,general,true,curated
+overhead_barbell_shrug,Overhead Barbell Shrug,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+overhead_dumbbell_shrug,Overhead Dumbbell Shrug,isolation,dumbbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.28,0.32,,0.30,0.50,general,false,curated
+scapular_pull_up,Scapular Pull-Up,vertical_pull,bodyweight,reps_only,traps,upper_back|forearms,core|rotator_cuff,0.72,0.55,1.00,0.10,0.60,general,false,curated
+weighted_scapular_pull_up,Weighted Scapular Pull-Up,vertical_pull,bodyweight,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.72,0.55,1.00,0.10,0.60,general,false,curated
+scapular_pulldown,Scapular Pulldown,isolation,barbell,weighted_reps,traps,upper_back|forearms,core|rotator_cuff,0.20,0.24,,0.05,0.50,general,false,curated
+standing_barbell_overhead_press,Standing Barbell Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+seated_barbell_overhead_press,Seated Barbell Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+strict_press,Strict Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+military_press,Military Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+push_press,Push Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.88,0.78,,0.70,0.40,general,false,curated
+z_press,Z Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+behind_the_neck_press,Behind-the-Neck Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+bradford_press,Bradford Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+pin_overhead_press,Pin Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+paused_overhead_press,Paused Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+close_grip_overhead_press,Close-Grip Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+wide_grip_overhead_press,Wide-Grip Overhead Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+dumbbell_shoulder_press,Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+seated_dumbbell_shoulder_press,Seated Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+standing_dumbbell_shoulder_press,Standing Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+neutral_grip_dumbbell_shoulder_press,Neutral-Grip Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+arnold_press,Arnold Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+single_arm_dumbbell_shoulder_press,Single-Arm Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.53,,0.40,0.58,general,true,curated
+alternating_dumbbell_shoulder_press,Alternating Dumbbell Shoulder Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.53,,0.45,0.58,general,true,curated
+kettlebell_press,Kettlebell Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+single_arm_kettlebell_press,Single-Arm Kettlebell Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.53,,0.40,0.58,general,true,curated
+bottoms_up_kettlebell_press,Bottoms-Up Kettlebell Press,vertical_press,dumbbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.66,0.50,,0.45,0.58,general,false,curated
+landmine_press,Landmine Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+half_kneeling_landmine_press,Half-Kneeling Landmine Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+single_arm_landmine_press,Single-Arm Landmine Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.61,,0.65,0.55,general,true,curated
+viking_press,Viking Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+smith_machine_shoulder_press,Smith Machine Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.55,0.40,,0.18,0.50,general,false,curated
+smith_machine_behind_the_neck_press,Smith Machine Behind-the-Neck Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.55,0.40,,0.18,0.50,general,false,curated
+machine_shoulder_press,Machine Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.55,0.40,,0.18,0.50,general,false,curated
+plate_loaded_shoulder_press,Plate-Loaded Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.55,0.40,,0.18,0.50,general,false,curated
+iso_lateral_shoulder_press,Iso-Lateral Shoulder Press,vertical_press,barbell,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.75,0.58,,0.70,0.55,general,false,curated
+single_arm_machine_shoulder_press,Single-Arm Machine Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps|upper_chest,upper_back|traps|rotator_cuff|core,0.55,0.43,,0.13,0.50,general,true,curated
+dumbbell_lateral_raise,Dumbbell Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+seated_dumbbell_lateral_raise,Seated Dumbbell Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+standing_dumbbell_lateral_raise,Standing Dumbbell Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+lean_away_dumbbell_lateral_raise,Lean-Away Dumbbell Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+incline_bench_lateral_raise,Incline-Bench Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+chest_supported_lateral_raise,Chest-Supported Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+cable_lateral_raise,Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+single_arm_cable_lateral_raise,Single-Arm Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.27,,0.00,0.50,general,true,curated
+behind_the_back_cable_lateral_raise,Behind-the-Back Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+cuffed_cable_lateral_raise,Cuffed Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+lean_away_cable_lateral_raise,Lean-Away Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+lying_cable_lateral_raise,Lying Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+cross_body_cable_lateral_raise,Cross-Body Cable Lateral Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+machine_lateral_raise,Machine Lateral Raise,isolation,machine,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+single_arm_machine_lateral_raise,Single-Arm Machine Lateral Raise,isolation,machine,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.27,,0.00,0.50,general,true,curated
+plate_lateral_raise,Plate Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+band_lateral_raise,Band Lateral Raise,isolation,bodyweight,reps_only,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+partial_lateral_raise,Partial Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.45,general,false,curated
+top_half_lateral_raise,Top-Half Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.45,general,false,curated
+bottom_half_lateral_raise,Bottom-Half Lateral Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.45,general,false,curated
+lu_raise,Lu Raise,isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+cable_lu_raise,Cable Lu Raise,isolation,cable,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+y_raise_lateral_delt_biased,Y-Raise (Lateral-Delt Biased),isolation,dumbbell,weighted_reps,lateral_delts,traps,rotator_cuff|core,0.22,0.24,,0.05,0.50,general,false,curated
+dumbbell_front_raise,Dumbbell Front Raise,isolation,dumbbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+alternating_dumbbell_front_raise,Alternating Dumbbell Front Raise,isolation,dumbbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.27,,0.05,0.50,general,true,curated
+single_arm_dumbbell_front_raise,Single-Arm Dumbbell Front Raise,isolation,dumbbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.27,,0.00,0.50,general,true,curated
+plate_front_raise,Plate Front Raise,isolation,dumbbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_front_raise,Barbell Front Raise,isolation,barbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+ez_bar_front_raise,EZ-Bar Front Raise,isolation,barbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+cable_front_raise,Cable Front Raise,isolation,cable,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_cable_front_raise,Single-Arm Cable Front Raise,isolation,cable,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.27,,0.00,0.50,general,true,curated
+rope_front_raise,Rope Front Raise,isolation,cable,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+incline_bench_front_raise,Incline Bench Front Raise,isolation,barbell,weighted_reps,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+band_front_raise,Band Front Raise,isolation,bodyweight,reps_only,anterior_delts,upper_chest,traps|rotator_cuff|core,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_upright_row,Barbell Upright Row,vertical_pull,barbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+ez_bar_upright_row,EZ-Bar Upright Row,vertical_pull,barbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+wide_grip_upright_row,Wide-Grip Upright Row,vertical_pull,barbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+close_grip_upright_row,Close-Grip Upright Row,vertical_pull,barbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+dumbbell_upright_row,Dumbbell Upright Row,vertical_pull,dumbbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+single_arm_dumbbell_upright_row,Single-Arm Dumbbell Upright Row,vertical_pull,dumbbell,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.48,,0.00,0.52,general,true,curated
+cable_upright_row,Cable Upright Row,vertical_pull,cable,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+rope_upright_row,Rope Upright Row,vertical_pull,cable,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.52,0.45,,0.05,0.52,general,false,curated
+smith_machine_upright_row,Smith Machine Upright Row,vertical_pull,machine,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.50,0.45,,0.05,0.50,general,false,curated
+machine_upright_row,Machine Upright Row,vertical_pull,machine,weighted_reps,lateral_delts|traps,biceps,forearms|rotator_cuff,0.50,0.45,,0.05,0.50,general,false,curated
+cable_external_rotation_at_side,Cable External Rotation at Side,isolation,cable,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+cable_external_rotation_at_90_abduction,Cable External Rotation at 90° Abduction,isolation,cable,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+single_arm_cable_external_rotation,Single-Arm Cable External Rotation,isolation,cable,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.21,,0.00,0.40,general,true,curated
+dumbbell_side_lying_external_rotation,Dumbbell Side-Lying External Rotation,isolation,dumbbell,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+band_external_rotation_at_side,Band External Rotation at Side,isolation,bodyweight,reps_only,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+band_external_rotation_at_90,Band External Rotation at 90°,isolation,bodyweight,reps_only,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+cable_internal_rotation,Cable Internal Rotation,isolation,cable,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+band_internal_rotation,Band Internal Rotation,isolation,bodyweight,reps_only,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+cuban_press,Cuban Press,isolation,dumbbell,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+dumbbell_cuban_rotation,Dumbbell Cuban Rotation,isolation,dumbbell,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+cable_cuban_rotation,Cable Cuban Rotation,isolation,cable,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+wall_slide,Wall Slide,isolation,dumbbell,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+serratus_wall_slide,Serratus Wall Slide,isolation,dumbbell,weighted_reps,rotator_cuff,posterior_delts,upper_back|serratus,0.16,0.18,,0.00,0.40,general,false,curated
+scapular_push_up,Scapular Push-Up,horizontal_press,bodyweight,reps_only,serratus,chest|anterior_delts,core|rotator_cuff,0.62,0.42,0.65,0.08,0.60,general,false,curated
+weighted_scapular_push_up,Weighted Scapular Push-Up,horizontal_press,bodyweight,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.62,0.42,0.65,0.08,0.60,general,false,curated
+push_up_plus,Push-Up Plus,horizontal_press,bodyweight,reps_only,serratus,chest|anterior_delts,core|rotator_cuff,0.62,0.42,0.65,0.08,0.60,general,false,curated
+cable_serratus_punch,Cable Serratus Punch,isolation,cable,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.16,0.18,,0.00,0.40,general,false,curated
+single_arm_cable_serratus_punch,Single-Arm Cable Serratus Punch,isolation,cable,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.16,0.21,,0.00,0.40,general,true,curated
+dumbbell_serratus_punch,Dumbbell Serratus Punch,isolation,dumbbell,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.16,0.18,,0.00,0.40,general,false,curated
+landmine_serratus_press,Landmine Serratus Press,isolation,barbell,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.16,0.18,,0.00,0.40,general,false,curated
+wall_slide_with_reach,Wall Slide with Reach,isolation,dumbbell,weighted_reps,serratus,chest|anterior_delts,core|rotator_cuff,0.16,0.18,,0.00,0.40,general,false,curated
+bear_plank_serratus_press,Bear-Plank Serratus Press,isolation,bodyweight,reps_only,serratus,chest|anterior_delts,core|rotator_cuff,0.20,0.22,,0.10,0.25,general,false,curated
+standing_barbell_curl,Standing Barbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+wide_grip_barbell_curl,Wide-Grip Barbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+narrow_grip_barbell_curl,Narrow-Grip Barbell Curl,horizontal_pull,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.48,0.46,,0.10,0.45,general,false,curated
+ez_bar_curl,EZ-Bar Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+wide_grip_ez_bar_curl,Wide-Grip EZ-Bar Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+narrow_grip_ez_bar_curl,Narrow-Grip EZ-Bar Curl,horizontal_pull,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.48,0.46,,0.10,0.45,general,false,curated
+seated_barbell_curl,Seated Barbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+drag_curl,Drag Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+barbell_drag_curl,Barbell Drag Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+ez_bar_drag_curl,EZ-Bar Drag Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+dumbbell_curl,Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+alternating_dumbbell_curl,Alternating Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.05,0.60,general,true,curated
+seated_dumbbell_curl,Seated Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+supinating_dumbbell_curl,Supinating Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+standing_supinating_dumbbell_curl,Standing Supinating Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+incline_dumbbell_curl,Incline Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+low_incline_dumbbell_curl,Low-Incline Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+high_incline_dumbbell_curl,High-Incline Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_incline_dumbbell_curl,Single-Arm Incline Dumbbell Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+spider_curl,Spider Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+dumbbell_spider_curl,Dumbbell Spider Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+ez_bar_spider_curl,EZ-Bar Spider Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+barbell_spider_curl,Barbell Spider Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+concentration_curl,Concentration Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+standing_concentration_curl,Standing Concentration Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+seated_concentration_curl,Seated Concentration Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+preacher_curl,Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+ez_bar_preacher_curl,EZ-Bar Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+barbell_preacher_curl,Barbell Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+dumbbell_preacher_curl,Dumbbell Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_dumbbell_preacher_curl,Single-Arm Dumbbell Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+machine_preacher_curl,Machine Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+plate_loaded_preacher_curl,Plate-Loaded Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cable_preacher_curl,Cable Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_cable_preacher_curl,Single-Arm Cable Preacher Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+standing_cable_curl,Standing Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+straight_bar_cable_curl,Straight-Bar Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+ez_bar_cable_curl,EZ-Bar Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+rope_cable_curl,Rope Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_cable_curl,Single-Arm Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+bayesian_cable_curl,Bayesian Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_bayesian_cable_curl,Single-Arm Bayesian Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+dual_cable_bayesian_curl,Dual-Cable Bayesian Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+behind_the_body_cable_curl,Behind-the-Body Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+high_cable_curl,High Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+double_biceps_cable_curl,Double-Biceps Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_high_cable_curl,Single-Arm High Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+lying_cable_curl,Lying Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+supine_cable_curl,Supine Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+seated_cable_curl,Seated Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cable_drag_curl,Cable Drag Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cable_spider_curl,Cable Spider Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cable_concentration_curl,Cable Concentration Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cross_body_cable_curl,Cross-Body Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+cuffed_cable_curl,Cuffed Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_cuffed_cable_curl,Single-Arm Cuffed Cable Curl,isolation,cable,weighted_reps,biceps,forearms,anterior_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+hammer_curl,Hammer Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+alternating_hammer_curl,Alternating Hammer Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.29,,0.05,0.60,general,true,curated
+cross_body_hammer_curl,Cross-Body Hammer Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+incline_hammer_curl,Incline Hammer Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+preacher_hammer_curl,Preacher Hammer Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+rope_hammer_curl,Rope Hammer Curl,isolation,cable,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_rope_hammer_curl,Single-Arm Rope Hammer Curl,isolation,cable,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.29,,0.00,0.60,general,true,curated
+cable_hammer_curl,Cable Hammer Curl,isolation,cable,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+machine_hammer_curl,Machine Hammer Curl,isolation,machine,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+pinwheel_curl,Pinwheel Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_barbell_curl,Reverse Barbell Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_ez_bar_curl,Reverse EZ-Bar Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_dumbbell_curl,Reverse Dumbbell Curl,isolation,dumbbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_cable_curl,Reverse Cable Curl,isolation,cable,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_preacher_curl,Reverse Preacher Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_machine_curl,Reverse Machine Curl,isolation,machine,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+zottman_curl,Zottman Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+incline_zottman_curl,Incline Zottman Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+preacher_zottman_curl,Preacher Zottman Curl,isolation,barbell,weighted_reps,biceps|forearms,,anterior_delts|lateral_delts|upper_back|core,0.22,0.26,,0.05,0.60,general,false,curated
+barbell_wrist_curl,Barbell Wrist Curl,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+behind_the_back_barbell_wrist_curl,Behind-the-Back Barbell Wrist Curl,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dumbbell_wrist_curl,Dumbbell Wrist Curl,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+single_arm_dumbbell_wrist_curl,Single-Arm Dumbbell Wrist Curl,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.25,,0.00,0.45,general,true,curated
+cable_wrist_curl,Cable Wrist Curl,isolation,cable,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+machine_wrist_curl,Machine Wrist Curl,isolation,machine,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+barbell_reverse_wrist_curl,Barbell Reverse Wrist Curl,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dumbbell_reverse_wrist_curl,Dumbbell Reverse Wrist Curl,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+cable_reverse_wrist_curl,Cable Reverse Wrist Curl,isolation,cable,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+wrist_roller_flexion,Wrist Roller Flexion,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+wrist_roller_extension,Wrist Roller Extension,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+hammer_lever_wrist_flexion,Hammer Lever Wrist Flexion,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+hammer_lever_wrist_extension,Hammer Lever Wrist Extension,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dumbbell_pronation,Dumbbell Pronation,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dumbbell_supination,Dumbbell Supination,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+cable_pronation,Cable Pronation,isolation,cable,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+cable_supination,Cable Supination,isolation,cable,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+radial_deviation_with_dumbbell,Radial Deviation with Dumbbell,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+ulnar_deviation_with_dumbbell,Ulnar Deviation with Dumbbell,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+finger_curl,Finger Curl,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.22,0.26,,0.05,0.60,general,false,curated
+barbell_finger_curl,Barbell Finger Curl,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.22,0.26,,0.05,0.60,general,false,curated
+plate_pinch_hold,Plate Pinch Hold,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+double_plate_pinch_hold,Double-Plate Pinch Hold,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+farmer_s_carry,Farmer's Carry,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+heavy_farmer_s_carry,Heavy Farmer's Carry,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+suitcase_carry,Suitcase Carry,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.25,,0.00,0.45,general,true,curated
+trap_bar_carry,Trap-Bar Carry,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dumbbell_carry,Dumbbell Carry,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+thick_handle_dumbbell_hold,Thick-Handle Dumbbell Hold,isolation,dumbbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+barbell_static_hold,Barbell Static Hold,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+double_overhand_barbell_hold,Double-Overhand Barbell Hold,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+mixed_grip_barbell_hold,Mixed-Grip Barbell Hold,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+dead_hang,Dead Hang,isolation,bodyweight,reps_only,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+weighted_dead_hang,Weighted Dead Hang,isolation,bodyweight,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+towel_dead_hang,Towel Dead Hang,isolation,bodyweight,reps_only,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+fat_grip_dead_hang,Fat-Grip Dead Hang,isolation,bodyweight,reps_only,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+captains_of_crush_gripper_close,Captains-of-Crush Gripper Close,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+hand_gripper_repetitions,Hand Gripper Repetitions,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+rice_bucket_finger_flexion,Rice-Bucket Finger Flexion,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+rice_bucket_finger_extension,Rice-Bucket Finger Extension,isolation,barbell,weighted_reps,forearms,biceps|traps,anterior_delts|lateral_delts|core,0.18,0.22,,0.00,0.45,general,false,curated
+straight_bar_triceps_pressdown,Straight-Bar Triceps Pressdown,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+v_bar_triceps_pressdown,V-Bar Triceps Pressdown,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+rope_triceps_pressdown,Rope Triceps Pressdown,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_cable_pressdown,Single-Arm Cable Pressdown,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+single_arm_reverse_grip_pressdown,Single-Arm Reverse-Grip Pressdown,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+reverse_grip_triceps_pressdown,Reverse-Grip Triceps Pressdown,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+cuffed_triceps_pressdown,Cuffed Triceps Pressdown,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+cross_body_cable_triceps_extension,Cross-Body Cable Triceps Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+dual_cable_triceps_pressdown,Dual-Cable Triceps Pressdown,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+kneeling_cable_pressdown,Kneeling Cable Pressdown,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+band_triceps_pressdown,Band Triceps Pressdown,isolation,bodyweight,reps_only,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_band_pressdown,Single-Arm Band Pressdown,isolation,bodyweight,reps_only,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+overhead_rope_triceps_extension,Overhead Rope Triceps Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+overhead_straight_bar_cable_extension,Overhead Straight-Bar Cable Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_overhead_cable_extension,Single-Arm Overhead Cable Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+cuffed_overhead_cable_triceps_extension,Cuffed Overhead Cable Triceps Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+seated_dumbbell_overhead_triceps_extension,Seated Dumbbell Overhead Triceps Extension,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+standing_dumbbell_overhead_triceps_extension,Standing Dumbbell Overhead Triceps Extension,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_dumbbell_overhead_triceps_extension,Single-Arm Dumbbell Overhead Triceps Extension,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+ez_bar_overhead_triceps_extension,EZ-Bar Overhead Triceps Extension,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_overhead_triceps_extension,Barbell Overhead Triceps Extension,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+machine_overhead_triceps_extension,Machine Overhead Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+band_overhead_triceps_extension,Band Overhead Triceps Extension,isolation,bodyweight,reps_only,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_band_overhead_extension,Single-Arm Band Overhead Extension,isolation,bodyweight,reps_only,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.27,,0.00,0.50,general,true,curated
+ez_bar_skull_crusher,EZ-Bar Skull Crusher,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_skull_crusher,Barbell Skull Crusher,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_skull_crusher,Dumbbell Skull Crusher,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+neutral_grip_dumbbell_skull_crusher,Neutral-Grip Dumbbell Skull Crusher,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+incline_skull_crusher,Incline Skull Crusher,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+decline_skull_crusher,Decline Skull Crusher,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+floor_skull_crusher,Floor Skull Crusher,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+rolling_dumbbell_triceps_extension,Rolling Dumbbell Triceps Extension,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+rolling_ez_bar_triceps_extension,Rolling EZ-Bar Triceps Extension,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+jm_press,JM Press,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+smith_machine_jm_press,Smith Machine JM Press,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+cable_skull_crusher,Cable Skull Crusher,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+lying_cable_triceps_extension,Lying Cable Triceps Extension,isolation,cable,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+pjr_pullover,PJR Pullover,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.28,0.30,,0.05,0.60,general,false,curated
+tate_press,Tate Press,isolation,barbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_tate_press,Dumbbell Tate Press,isolation,dumbbell,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back|core,0.20,0.24,,0.05,0.50,general,false,curated
+close_grip_bench_press_triceps_biased,Close-Grip Bench Press (Triceps-Biased),horizontal_press,barbell,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.80,0.57,,0.15,0.60,bench,false,curated
+smith_machine_close_grip_bench_press,Smith Machine Close-Grip Bench Press,horizontal_press,machine,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.58,0.44,,0.08,0.52,general,false,curated
+close_grip_floor_press_triceps_biased,Close-Grip Floor Press (Triceps-Biased),horizontal_press,barbell,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.80,0.57,,0.15,0.52,general,false,curated
+triceps_dip,Triceps Dip,horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+weighted_triceps_dip,Weighted Triceps Dip,horizontal_press,bodyweight,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+assisted_triceps_dip,Assisted Triceps Dip,horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+upright_parallel_bar_dip,Upright Parallel-Bar Dip,horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+machine_dip_triceps_biased,Machine Dip (Triceps-Biased),horizontal_press,bodyweight,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+bench_dip,Bench Dip,horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+weighted_bench_dip,Weighted Bench Dip,horizontal_press,bodyweight,weighted_reps,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.72,0.52,0.95,0.20,0.70,general,false,curated
+close_grip_push_up_triceps_biased,Close-Grip Push-Up (Triceps-Biased),horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.64,0.44,0.65,0.08,0.60,general,false,curated
+diamond_push_up_triceps_biased,Diamond Push-Up (Triceps-Biased),horizontal_press,bodyweight,reps_only,triceps,chest|anterior_delts,upper_back|core|rotator_cuff,0.62,0.42,0.65,0.08,0.60,general,false,curated
+high_bar_back_squat,High-Bar Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+low_bar_back_squat,Low-Bar Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+competition_back_squat,Competition Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+paused_back_squat,Paused Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.95,,0.95,0.75,general,false,curated
+tempo_back_squat,Tempo Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.95,,0.95,0.95,general,false,curated
+pin_squat,Pin Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+anderson_squat,Anderson Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+box_squat,Box Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.64,general,false,curated
+high_box_squat,High Box Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.64,general,false,curated
+low_box_squat,Low Box Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.64,general,false,curated
+wide_stance_back_squat,Wide-Stance Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+narrow_stance_back_squat,Narrow-Stance Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+heels_elevated_back_squat,Heels-Elevated Back Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.95,0.92,,0.95,0.75,general,false,curated
+front_squat,Front Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.86,,0.90,0.75,general,false,curated
+paused_front_squat,Paused Front Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.89,,0.90,0.75,general,false,curated
+tempo_front_squat,Tempo Front Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.89,,0.90,0.95,general,false,curated
+zombie_squat,Zombie Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+cross_arm_front_squat,Cross-Arm Front Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.86,,0.90,0.75,general,false,curated
+safety_bar_squat,Safety Bar Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+safety_bar_box_squat,Safety Bar Box Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.64,general,false,curated
+safety_bar_hatfield_squat,Safety Bar Hatfield Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+hatfield_squat,Hatfield Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+cambered_bar_squat,Cambered Bar Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+buffalo_bar_squat,Buffalo Bar Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+duffalo_bar_squat,Duffalo Bar Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+zercher_squat,Zercher Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+overhead_squat,Overhead Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+goblet_squat,Goblet Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+heels_elevated_goblet_squat,Heels-Elevated Goblet Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+cyclist_squat,Cyclist Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+dumbbell_squat,Dumbbell Squat,squat,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.62,0.68,,0.35,0.70,general,false,curated
+kettlebell_front_squat,Kettlebell Front Squat,squat,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.86,,0.90,0.75,general,false,curated
+double_kettlebell_front_squat,Double-Kettlebell Front Squat,squat,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.86,,0.90,0.75,general,false,curated
+landmine_squat,Landmine Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+landmine_hack_squat,Landmine Hack Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.72,,0.45,0.70,general,false,curated
+smith_machine_squat,Smith Machine Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.72,,0.50,0.70,general,false,curated
+smith_machine_heels_elevated_squat,Smith Machine Heels-Elevated Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.72,,0.50,0.70,general,false,curated
+smith_machine_front_squat,Smith Machine Front Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.90,0.86,,0.90,0.75,general,false,curated
+smith_machine_hack_squat,Smith Machine Hack Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.72,,0.45,0.70,general,false,curated
+hack_squat,Hack Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.72,,0.45,0.70,general,false,curated
+plate_loaded_hack_squat,Plate-Loaded Hack Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.72,,0.45,0.70,general,false,curated
+reverse_hack_squat,Reverse Hack Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.72,,0.45,0.70,general,false,curated
+pendulum_squat,Pendulum Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.62,0.72,,0.40,0.72,general,false,curated
+v_squat,V-Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.62,0.72,,0.40,0.72,general,false,curated
+power_squat_machine,Power Squat Machine,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.62,0.72,,0.40,0.72,general,false,curated
+leverage_squat_machine,Leverage Squat Machine,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.72,,0.50,0.70,general,false,curated
+belt_squat,Belt Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.58,,0.18,0.68,general,false,curated
+cable_belt_squat,Cable Belt Squat,squat,cable,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.58,,0.18,0.68,general,false,curated
+machine_belt_squat,Machine Belt Squat,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.60,0.58,,0.18,0.68,general,false,curated
+sissy_squat,Sissy Squat,squat,bodyweight,reps_only,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,0.70,0.80,0.72,general,false,curated
+weighted_sissy_squat,Weighted Sissy Squat,squat,bodyweight,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,0.70,0.80,0.72,general,false,curated
+machine_sissy_squat,Machine Sissy Squat,squat,bodyweight,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,0.70,0.80,0.72,general,false,curated
+spanish_squat,Spanish Squat,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+wall_sit,Wall Sit,squat,bodyweight,reps_only,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+weighted_wall_sit,Weighted Wall Sit,squat,bodyweight,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.82,,0.80,0.72,general,false,curated
+bulgarian_split_squat,Bulgarian Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.75,0.85,0.40,0.80,general,true,curated
+dumbbell_bulgarian_split_squat,Dumbbell Bulgarian Split Squat,lunge,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+barbell_bulgarian_split_squat,Barbell Bulgarian Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+smith_machine_bulgarian_split_squat,Smith Machine Bulgarian Split Squat,lunge,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.58,0.68,0.85,0.20,0.75,general,true,curated
+front_foot_elevated_bulgarian_split_squat,Front-Foot-Elevated Bulgarian Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+heel_elevated_bulgarian_split_squat,Heel-Elevated Bulgarian Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+split_squat,Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+dumbbell_split_squat,Dumbbell Split Squat,lunge,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+barbell_split_squat,Barbell Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+smith_machine_split_squat,Smith Machine Split Squat,lunge,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.58,0.68,0.85,0.20,0.75,general,true,curated
+front_foot_elevated_split_squat,Front-Foot-Elevated Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+heel_elevated_split_squat,Heel-Elevated Split Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+reverse_lunge,Reverse Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+dumbbell_reverse_lunge,Dumbbell Reverse Lunge,lunge,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+barbell_reverse_lunge,Barbell Reverse Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+smith_machine_reverse_lunge,Smith Machine Reverse Lunge,lunge,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.58,0.68,0.85,0.20,0.75,general,true,curated
+forward_lunge,Forward Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+walking_lunge,Walking Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.83,0.85,0.40,0.80,general,true,curated
+dumbbell_walking_lunge,Dumbbell Walking Lunge,lunge,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.83,0.85,0.40,0.80,general,true,curated
+barbell_walking_lunge,Barbell Walking Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.83,0.85,0.40,0.80,general,true,curated
+deficit_reverse_lunge,Deficit Reverse Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+curtsy_lunge,Curtsy Lunge,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+step_up,Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+high_step_up,High Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+low_step_up,Low Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+dumbbell_step_up,Dumbbell Step-Up,lunge,dumbbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+barbell_step_up,Barbell Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+lateral_step_up,Lateral Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+peterson_step_up,Peterson Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+poliquin_step_up,Poliquin Step-Up,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.30,0.80,general,true,curated
+step_down,Step-Down,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,,0.40,0.80,general,true,curated
+single_leg_squat_to_box,Single-Leg Squat to Box,squat,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.82,0.85,,0.80,0.72,general,true,curated
+pistol_squat,Pistol Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+assisted_pistol_squat,Assisted Pistol Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+weighted_pistol_squat,Weighted Pistol Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+shrimp_squat,Shrimp Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+skater_squat,Skater Squat,lunge,barbell,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.65,0.78,0.85,0.40,0.80,general,true,curated
+45_leg_press,45° Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+horizontal_leg_press,Horizontal Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+vertical_leg_press,Vertical Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+plate_loaded_leg_press,Plate-Loaded Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+selectorized_leg_press,Selectorized Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+single_leg_leg_press,Single-Leg Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.73,,0.20,0.60,leg_press,true,curated
+45_single_leg_leg_press,45° Single-Leg Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.73,,0.20,0.60,leg_press,true,curated
+wide_stance_leg_press,Wide-Stance Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+narrow_stance_leg_press,Narrow-Stance Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+high_foot_leg_press,High-Foot Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+low_foot_leg_press,Low-Foot Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+feet_together_leg_press,Feet-Together Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+quad_biased_leg_press,Quad-Biased Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+glute_biased_leg_press,Glute-Biased Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.70,,0.20,0.60,leg_press,false,curated
+paused_leg_press,Paused Leg Press,squat,machine,weighted_reps,quads|glutes,adductors|spinal_erectors,core|calves,0.55,0.73,,0.20,0.60,leg_press,false,curated
+leg_extension,Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.55,general,false,curated
+single_leg_leg_extension,Single-Leg Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.31,,0.00,0.55,general,true,curated
+plate_loaded_leg_extension,Plate-Loaded Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.55,general,false,curated
+selectorized_leg_extension,Selectorized Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.55,general,false,curated
+constant_tension_leg_extension,Constant-Tension Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.55,general,false,curated
+top_half_leg_extension,Top-Half Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.50,general,false,curated
+bottom_half_leg_extension,Bottom-Half Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.50,general,false,curated
+1_5_rep_leg_extension,1.5-Rep Leg Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.28,,0.00,0.55,general,false,curated
+reverse_nordic_curl,Reverse Nordic Curl,isolation,bodyweight,reps_only,quads,hip_flexors,core,0.20,0.28,0.70,0.00,0.55,general,false,curated
+assisted_reverse_nordic_curl,Assisted Reverse Nordic Curl,isolation,bodyweight,reps_only,quads,hip_flexors,core,0.20,0.28,0.70,0.00,0.55,general,false,curated
+weighted_reverse_nordic_curl,Weighted Reverse Nordic Curl,isolation,bodyweight,weighted_reps,quads,hip_flexors,core,0.20,0.28,0.70,0.00,0.55,general,false,curated
+bodyweight_knee_extension_with_band,Bodyweight Knee Extension with Band,isolation,bodyweight,reps_only,quads,hip_flexors,core,0.20,0.24,,0.05,0.50,general,false,curated
+terminal_knee_extension,Terminal Knee Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.24,,0.05,0.50,general,false,curated
+single_leg_terminal_knee_extension,Single-Leg Terminal Knee Extension,isolation,machine,weighted_reps,quads,hip_flexors,core,0.20,0.27,,0.05,0.50,general,true,curated
+conventional_deadlift,Conventional Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,1.00,1.00,,1.00,0.55,general,false,curated
+competition_conventional_deadlift,Competition Conventional Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,1.00,1.00,,1.00,0.55,general,false,curated
+paused_deadlift,Paused Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.64,,0.45,0.70,general,false,curated
+deficit_deadlift,Deficit Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.65,,0.45,0.76,general,false,curated
+block_pull,Block Pull,isolation,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+rack_pull,Rack Pull,isolation,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+snatch_grip_deadlift,Snatch-Grip Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+wide_grip_deadlift,Wide-Grip Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+touch_and_go_deadlift,Touch-and-Go Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+tempo_deadlift,Tempo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.88,general,false,curated
+romanian_deadlift,Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+barbell_romanian_deadlift,Barbell Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+paused_romanian_deadlift,Paused Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.90,,0.85,0.90,general,false,curated
+deficit_romanian_deadlift,Deficit Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.91,,0.85,0.96,general,false,curated
+snatch_grip_romanian_deadlift,Snatch-Grip Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+stiff_leg_deadlift,Stiff-Leg Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+dumbbell_romanian_deadlift,Dumbbell Romanian Deadlift,hinge,dumbbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.72,0.72,,0.45,0.90,general,false,curated
+single_leg_dumbbell_romanian_deadlift,Single-Leg Dumbbell Romanian Deadlift,hinge,dumbbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.72,0.75,,0.45,0.90,general,true,curated
+b_stance_dumbbell_romanian_deadlift,B-Stance Dumbbell Romanian Deadlift,hinge,dumbbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.72,0.72,,0.45,0.90,general,false,curated
+barbell_single_leg_romanian_deadlift,Barbell Single-Leg Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.91,,0.85,0.90,general,true,curated
+b_stance_barbell_romanian_deadlift,B-Stance Barbell Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+kettlebell_romanian_deadlift,Kettlebell Romanian Deadlift,hinge,dumbbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.72,0.72,,0.45,0.90,general,false,curated
+double_kettlebell_romanian_deadlift,Double-Kettlebell Romanian Deadlift,hinge,dumbbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.72,0.72,,0.45,0.90,general,false,curated
+smith_machine_romanian_deadlift,Smith Machine Romanian Deadlift,hinge,machine,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.68,0.68,,0.45,0.85,general,false,curated
+smith_machine_stiff_leg_deadlift,Smith Machine Stiff-Leg Deadlift,hinge,machine,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.68,0.68,,0.45,0.85,general,false,curated
+cable_romanian_deadlift,Cable Romanian Deadlift,hinge,cable,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.58,0.55,,0.15,0.80,general,false,curated
+cable_pull_through,Cable Pull-Through,hinge,cable,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+trap_bar_deadlift,Trap-Bar Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+high_handle_trap_bar_deadlift,High-Handle Trap-Bar Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+low_handle_trap_bar_deadlift,Low-Handle Trap-Bar Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.62,0.62,,0.45,0.70,general,false,curated
+trap_bar_romanian_deadlift,Trap-Bar Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+sumo_deadlift,Sumo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.95,0.95,,0.95,0.55,general,false,curated
+competition_sumo_deadlift,Competition Sumo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.95,0.95,,0.95,0.55,general,false,curated
+paused_sumo_deadlift,Paused Sumo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.95,0.97,,0.95,0.55,general,false,curated
+deficit_sumo_deadlift,Deficit Sumo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.95,0.98,,0.95,0.61,general,false,curated
+block_sumo_deadlift,Block Sumo Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.95,0.95,,0.95,0.55,general,false,curated
+wide_stance_romanian_deadlift,Wide-Stance Romanian Deadlift,hinge,barbell,weighted_reps,hamstrings|glutes|spinal_erectors,adductors|forearms,core|lats|upper_back,0.85,0.88,,0.85,0.90,general,false,curated
+seated_leg_curl,Seated Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+lying_leg_curl,Lying Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+prone_leg_curl,Prone Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.29,,0.00,0.65,general,true,curated
+standing_leg_curl,Standing Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+single_leg_seated_leg_curl,Single-Leg Seated Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.29,,0.00,0.65,general,true,curated
+single_leg_lying_leg_curl,Single-Leg Lying Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.29,,0.00,0.65,general,true,curated
+single_leg_standing_leg_curl,Single-Leg Standing Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.29,,0.00,0.65,general,true,curated
+plate_loaded_leg_curl,Plate-Loaded Leg Curl,isolation,machine,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+selectorized_leg_curl,Selectorized Leg Curl,isolation,machine,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+nordic_hamstring_curl,Nordic Hamstring Curl,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+assisted_nordic_hamstring_curl,Assisted Nordic Hamstring Curl,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+weighted_nordic_hamstring_curl,Weighted Nordic Hamstring Curl,isolation,bodyweight,weighted_reps,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+eccentric_nordic_curl,Eccentric Nordic Curl,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+glute_ham_raise,Glute-Ham Raise,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+weighted_glute_ham_raise,Weighted Glute-Ham Raise,isolation,bodyweight,weighted_reps,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+assisted_glute_ham_raise,Assisted Glute-Ham Raise,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.34,0.38,0.70,0.05,0.90,general,false,curated
+swiss_ball_leg_curl,Swiss-Ball Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+slider_leg_curl,Slider Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+single_leg_slider_curl,Single-Leg Slider Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.20,0.27,,0.05,0.50,general,true,curated
+suspension_trainer_leg_curl,Suspension-Trainer Leg Curl,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+cable_leg_curl,Cable Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+standing_cable_leg_curl,Standing Cable Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+prone_cable_leg_curl,Prone Cable Leg Curl,isolation,cable,weighted_reps,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+band_leg_curl,Band Leg Curl,isolation,bodyweight,reps_only,hamstrings,calves|glutes,core,0.18,0.26,,0.00,0.65,general,false,curated
+barbell_hip_thrust,Barbell Hip Thrust,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+paused_barbell_hip_thrust,Paused Barbell Hip Thrust,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.50,,0.18,0.58,general,false,curated
+banded_barbell_hip_thrust,Banded Barbell Hip Thrust,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+dumbbell_hip_thrust,Dumbbell Hip Thrust,hinge,dumbbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+smith_machine_hip_thrust,Smith Machine Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+machine_hip_thrust,Machine Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+plate_loaded_hip_thrust,Plate-Loaded Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+single_leg_hip_thrust,Single-Leg Hip Thrust,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.51,,0.18,0.58,general,true,curated
+b_stance_hip_thrust,B-Stance Hip Thrust,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+kas_glute_bridge,Kas Glute Bridge,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+barbell_glute_bridge,Barbell Glute Bridge,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+dumbbell_glute_bridge,Dumbbell Glute Bridge,hinge,dumbbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.48,,0.18,0.58,general,false,curated
+single_leg_glute_bridge,Single-Leg Glute Bridge,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.52,0.51,,0.18,0.58,general,true,curated
+frog_pump,Frog Pump,isolation,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_frog_pump,Weighted Frog Pump,isolation,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+reverse_hyperextension,Reverse Hyperextension,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.40,0.42,0.55,0.50,0.55,general,false,curated
+single_leg_reverse_hyperextension,Single-Leg Reverse Hyperextension,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.40,0.45,0.55,0.50,0.55,general,true,curated
+45_hip_extension_glute_biased,45° Hip Extension (Glute-Biased),hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.62,0.62,,0.45,0.70,general,false,curated
+rounded_back_45_hip_extension,Rounded-Back 45° Hip Extension,hinge,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.62,0.62,,0.45,0.70,general,false,curated
+cable_hip_extension,Cable Hip Extension,hinge,cable,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.62,0.62,,0.45,0.70,general,false,curated
+standing_cable_hip_extension,Standing Cable Hip Extension,hinge,cable,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.62,0.62,,0.45,0.70,general,false,curated
+quadruped_cable_hip_extension,Quadruped Cable Hip Extension,hinge,cable,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.62,0.62,,0.45,0.70,general,false,curated
+cable_kickback,Cable Kickback,isolation,cable,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+cuffed_cable_kickback,Cuffed Cable Kickback,isolation,cable,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+machine_glute_kickback,Machine Glute Kickback,isolation,machine,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+donkey_kick,Donkey Kick,isolation,barbell,weighted_reps,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+band_donkey_kick,Band Donkey Kick,isolation,bodyweight,reps_only,glutes,hamstrings|adductors,core|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+seated_hip_abduction_machine,Seated Hip Abduction Machine,isolation,machine,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+standing_hip_abduction_machine,Standing Hip Abduction Machine,isolation,machine,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+cable_hip_abduction,Cable Hip Abduction,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+standing_cable_hip_abduction,Standing Cable Hip Abduction,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+side_lying_cable_hip_abduction,Side-Lying Cable Hip Abduction,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+cuffed_cable_hip_abduction,Cuffed Cable Hip Abduction,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+band_hip_abduction,Band Hip Abduction,isolation,bodyweight,reps_only,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+lateral_band_walk,Lateral Band Walk,isolation,bodyweight,reps_only,abductors|glutes,,core|quads,0.20,0.24,,0.05,0.50,general,false,curated
+monster_walk,Monster Walk,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.20,0.24,,0.05,0.50,general,false,curated
+side_lying_leg_raise,Side-Lying Leg Raise,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_side_lying_hip_abduction,Weighted Side-Lying Hip Abduction,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+clamshell,Clamshell,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+banded_clamshell,Banded Clamshell,isolation,bodyweight,reps_only,abductors|glutes,,core|quads,0.18,0.24,,0.00,0.45,general,false,curated
+hip_hike,Hip Hike,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.20,0.24,,0.05,0.50,general,false,curated
+cable_hip_hike,Cable Hip Hike,isolation,cable,weighted_reps,abductors|glutes,,core|quads,0.20,0.24,,0.05,0.50,general,false,curated
+lateral_step_up_glute_medius_biased,Lateral Step-Up (Glute Medius-Biased),lunge,cable,weighted_reps,abductors|glutes,,core|quads,0.65,0.78,0.85,0.30,0.80,general,true,curated
+seated_hip_adduction_machine,Seated Hip Adduction Machine,isolation,machine,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+standing_hip_adduction_machine,Standing Hip Adduction Machine,isolation,machine,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+cable_hip_adduction,Cable Hip Adduction,isolation,cable,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+standing_cable_hip_adduction,Standing Cable Hip Adduction,isolation,cable,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+cuffed_cable_hip_adduction,Cuffed Cable Hip Adduction,isolation,cable,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+side_lying_hip_adduction,Side-Lying Hip Adduction,isolation,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.18,0.25,,0.00,0.45,general,false,curated
+copenhagen_plank,Copenhagen Plank,isolation,bodyweight,reps_only,adductors,glutes|quads,core|hamstrings,0.20,0.22,,0.10,0.25,general,false,curated
+weighted_copenhagen_plank,Weighted Copenhagen Plank,isolation,bodyweight,weighted_reps,adductors,glutes|quads,core|hamstrings,0.20,0.22,,0.10,0.25,general,false,curated
+short_lever_copenhagen_plank,Short-Lever Copenhagen Plank,isolation,bodyweight,reps_only,adductors,glutes|quads,core|hamstrings,0.20,0.22,,0.10,0.25,general,false,curated
+long_lever_copenhagen_plank,Long-Lever Copenhagen Plank,isolation,bodyweight,reps_only,adductors,glutes|quads,core|hamstrings,0.20,0.22,,0.10,0.25,general,false,curated
+sumo_squat_adductor_biased,Sumo Squat (Adductor-Biased),isolation,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.20,0.24,,0.05,0.50,general,false,curated
+wide_stance_leg_press_adductor_biased,Wide-Stance Leg Press (Adductor-Biased),isolation,machine,weighted_reps,adductors,glutes|quads,core|hamstrings,0.20,0.24,,0.05,0.50,general,false,curated
+cossack_squat,Cossack Squat,isolation,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_cossack_squat,Weighted Cossack Squat,isolation,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.20,0.24,,0.05,0.50,general,false,curated
+lateral_lunge,Lateral Lunge,lunge,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.65,0.78,0.85,0.40,0.80,general,true,curated
+dumbbell_lateral_lunge,Dumbbell Lateral Lunge,lunge,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.65,0.78,0.85,0.40,0.80,general,true,curated
+sliding_lateral_lunge,Sliding Lateral Lunge,lunge,dumbbell,weighted_reps,adductors,glutes|quads,core|hamstrings,0.65,0.78,0.85,0.40,0.80,general,true,curated
+standing_cable_hip_flexion,Standing Cable Hip Flexion,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+cuffed_cable_hip_flexion,Cuffed Cable Hip Flexion,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+seated_cable_hip_flexion,Seated Cable Hip Flexion,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+band_hip_flexion,Band Hip Flexion,isolation,bodyweight,reps_only,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+standing_band_hip_flexion,Standing Band Hip Flexion,isolation,bodyweight,reps_only,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+hanging_knee_raise_hip_flexor_biased,Hanging Knee Raise (Hip-Flexor Biased),isolation,bodyweight,reps_only,hip_flexors,abs|quads,core,0.30,0.28,0.55,0.15,0.55,general,false,curated
+weighted_hanging_knee_raise,Weighted Hanging Knee Raise,isolation,bodyweight,weighted_reps,hip_flexors,abs|quads,core,0.30,0.28,0.55,0.15,0.55,general,false,curated
+captain_s_chair_knee_raise,Captain's Chair Knee Raise,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+psoas_march,Psoas March,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+band_resisted_psoas_march,Band-Resisted Psoas March,isolation,bodyweight,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+seated_psoas_lift,Seated Psoas Lift,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_seated_psoas_lift,Weighted Seated Psoas Lift,isolation,cable,weighted_reps,hip_flexors,abs|quads,core,0.20,0.24,,0.05,0.50,general,false,curated
+standing_barbell_calf_raise,Standing Barbell Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+standing_dumbbell_calf_raise,Standing Dumbbell Calf Raise,isolation,dumbbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_dumbbell_calf_raise,Single-Leg Dumbbell Calf Raise,isolation,dumbbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+smith_machine_standing_calf_raise,Smith Machine Standing Calf Raise,isolation,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+standing_calf_raise_machine,Standing Calf Raise Machine,isolation,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_standing_calf_raise,Single-Leg Standing Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+leg_press_calf_raise,Leg Press Calf Raise,isolation,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_leg_press_calf_raise,Single-Leg Leg Press Calf Raise,isolation,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+hack_squat_calf_raise,Hack Squat Calf Raise,squat,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.60,0.72,,0.45,0.70,general,false,curated
+donkey_calf_raise,Donkey Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+weighted_donkey_calf_raise,Weighted Donkey Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+seated_calf_raise,Seated Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+plate_loaded_seated_calf_raise,Plate-Loaded Seated Calf Raise,isolation,machine,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+dumbbell_seated_calf_raise,Dumbbell Seated Calf Raise,isolation,dumbbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_seated_calf_raise,Single-Leg Seated Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+bent_knee_calf_raise,Bent-Knee Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+cable_standing_calf_raise,Cable Standing Calf Raise,isolation,cable,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_cable_calf_raise,Single-Leg Cable Calf Raise,isolation,cable,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+bodyweight_calf_raise,Bodyweight Calf Raise,isolation,bodyweight,reps_only,calves,,foot_ankle_stabilisers,0.18,0.24,0.90,0.30,0.70,general,false,curated
+single_leg_bodyweight_calf_raise,Single-Leg Bodyweight Calf Raise,isolation,bodyweight,reps_only,calves,,foot_ankle_stabilisers,0.18,0.27,0.90,0.30,0.70,general,true,curated
+deficit_calf_raise,Deficit Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+single_leg_deficit_calf_raise,Single-Leg Deficit Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.27,,0.30,0.70,general,true,curated
+paused_calf_raise,Paused Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.70,general,false,curated
+top_half_calf_raise,Top-Half Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.65,general,false,curated
+bottom_half_calf_raise,Bottom-Half Calf Raise,isolation,barbell,weighted_reps,calves,,foot_ankle_stabilisers,0.18,0.24,,0.30,0.65,general,false,curated
+tibialis_raise,Tibialis Raise,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+wall_supported_tibialis_raise,Wall-Supported Tibialis Raise,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+weighted_tibialis_raise,Weighted Tibialis Raise,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+tib_bar_raise,Tib Bar Raise,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+single_leg_tibialis_raise,Single-Leg Tibialis Raise,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.21,,0.00,0.40,general,true,curated
+cable_dorsiflexion,Cable Dorsiflexion,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+band_dorsiflexion,Band Dorsiflexion,isolation,bodyweight,reps_only,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+heel_walk,Heel Walk,isolation,cable,weighted_reps,tibialis,,foot_ankle_stabilisers,0.16,0.18,,0.00,0.40,general,false,curated
+45_back_extension,45° Back Extension,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+weighted_45_back_extension,Weighted 45° Back Extension,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+45_back_extension_erector_biased,45° Back Extension (Erector-Biased),hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+roman_chair_back_extension,Roman-Chair Back Extension,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+weighted_roman_chair_back_extension,Weighted Roman-Chair Back Extension,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+horizontal_back_extension,Horizontal Back Extension,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+machine_back_extension,Machine Back Extension,hinge,machine,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+seated_machine_back_extension,Seated Machine Back Extension,hinge,machine,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+cable_back_extension,Cable Back Extension,hinge,cable,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+good_morning,Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+barbell_good_morning,Barbell Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+safety_bar_good_morning,Safety Bar Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+seated_good_morning,Seated Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+wide_stance_good_morning,Wide-Stance Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+paused_good_morning,Paused Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.80,,0.82,0.88,general,false,curated
+zercher_good_morning,Zercher Good Morning,hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.76,0.78,,0.82,0.88,general,false,curated
+jefferson_curl,Jefferson Curl,isolation,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.22,0.26,,0.05,0.60,general,false,curated
+weighted_jefferson_curl,Weighted Jefferson Curl,isolation,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.22,0.26,,0.05,0.60,general,false,curated
+reverse_hyperextension_erector_biased,Reverse Hyperextension (Erector-Biased),hinge,barbell,weighted_reps,spinal_erectors,hamstrings|glutes,core|upper_back,0.40,0.42,0.55,0.50,0.55,general,false,curated
+cable_crunch,Cable Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+kneeling_cable_crunch,Kneeling Cable Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+standing_cable_crunch,Standing Cable Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+machine_crunch,Machine Crunch,isolation,machine,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+ab_crunch_machine,Ab Crunch Machine,isolation,machine,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+weighted_floor_crunch,Weighted Floor Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+plate_crunch,Plate Crunch,isolation,dumbbell,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+decline_sit_up,Decline Sit-Up,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_decline_sit_up,Weighted Decline Sit-Up,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+roman_chair_sit_up,Roman-Chair Sit-Up,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_sit_up,Weighted Sit-Up,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+abmat_sit_up,AbMat Sit-Up,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+reverse_crunch,Reverse Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+weighted_reverse_crunch,Weighted Reverse Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+bench_reverse_crunch,Bench Reverse Crunch,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.10,0.50,general,false,curated
+hanging_leg_raise,Hanging Leg Raise,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.30,0.28,0.55,0.15,0.55,general,false,curated
+weighted_hanging_leg_raise,Weighted Hanging Leg Raise,isolation,bodyweight,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.30,0.28,0.55,0.15,0.55,general,false,curated
+hanging_knee_raise,Hanging Knee Raise,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.30,0.28,0.55,0.15,0.55,general,false,curated
+captain_s_chair_leg_raise,Captain's Chair Leg Raise,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+lying_leg_raise,Lying Leg Raise,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_lying_leg_raise,Weighted Lying Leg Raise,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+garhammer_raise,Garhammer Raise,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+dragon_flag,Dragon Flag,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+negative_dragon_flag,Negative Dragon Flag,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+ab_wheel_rollout,Ab Wheel Rollout,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.32,0.30,0.60,0.25,0.85,general,false,curated
+barbell_rollout,Barbell Rollout,isolation,bodyweight,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.32,0.30,0.60,0.25,0.85,general,false,curated
+kneeling_ab_wheel_rollout,Kneeling Ab Wheel Rollout,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.32,0.30,0.60,0.25,0.85,general,false,curated
+standing_ab_wheel_rollout,Standing Ab Wheel Rollout,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.32,0.30,0.60,0.25,0.85,general,false,curated
+swiss_ball_rollout,Swiss-Ball Rollout,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.32,0.30,0.60,0.25,0.85,general,false,curated
+body_saw,Body Saw,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+trx_body_saw,TRX Body Saw,isolation,bodyweight,reps_only,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+hollow_body_hold,Hollow Body Hold,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_hollow_body_hold,Weighted Hollow Body Hold,isolation,cable,weighted_reps,abs,hip_flexors|deep_core,obliques|serratus,0.20,0.24,,0.05,0.50,general,false,curated
+cable_wood_chop,Cable Wood Chop,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+high_to_low_cable_wood_chop,High-to-Low Cable Wood Chop,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+low_to_high_cable_wood_chop,Low-to-High Cable Wood Chop,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+horizontal_cable_chop,Horizontal Cable Chop,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+landmine_rotation,Landmine Rotation,isolation,barbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+landmine_twist,Landmine Twist,isolation,barbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+russian_twist,Russian Twist,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_russian_twist,Weighted Russian Twist,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+decline_russian_twist,Decline Russian Twist,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+cable_side_bend,Cable Side Bend,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_side_bend,Dumbbell Side Bend,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+suitcase_side_bend,Suitcase Side Bend,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+45_side_bend,45° Side Bend,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+hanging_windshield_wiper,Hanging Windshield Wiper,isolation,bodyweight,reps_only,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+floor_windshield_wiper,Floor Windshield Wiper,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+cable_rotation,Cable Rotation,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+standing_cable_rotation,Standing Cable Rotation,isolation,cable,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.24,,0.05,0.50,general,false,curated
+pallof_press,Pallof Press,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+half_kneeling_pallof_press,Half-Kneeling Pallof Press,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+tall_kneeling_pallof_press,Tall-Kneeling Pallof Press,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+pallof_press_hold,Pallof Press Hold,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+pallof_press_walkout,Pallof Press Walkout,isolation,dumbbell,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+side_plank,Side Plank,isolation,bodyweight,reps_only,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+weighted_side_plank,Weighted Side Plank,isolation,bodyweight,weighted_reps,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+star_side_plank,Star Side Plank,isolation,bodyweight,reps_only,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+copenhagen_side_plank,Copenhagen Side Plank,isolation,bodyweight,reps_only,obliques,deep_core|abs,glutes|anterior_delts|lateral_delts,0.20,0.22,,0.10,0.25,general,false,curated
+front_plank,Front Plank,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.22,,0.10,0.25,general,false,curated
+weighted_plank,Weighted Plank,isolation,bodyweight,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.22,,0.10,0.25,general,false,curated
+long_lever_plank,Long-Lever Plank,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.22,,0.10,0.25,general,false,curated
+rkc_plank,RKC Plank,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.22,,0.10,0.25,general,false,curated
+dead_bug,Dead Bug,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_dead_bug,Weighted Dead Bug,isolation,bodyweight,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+bird_dog,Bird Dog,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+weighted_bird_dog,Weighted Bird Dog,isolation,bodyweight,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+bear_plank,Bear Plank,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.22,,0.10,0.25,general,false,curated
+bear_crawl,Bear Crawl,isolation,bodyweight,reps_only,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+suitcase_carry_core_biased,Suitcase Carry (Core-Biased),isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.27,,0.05,0.50,general,true,curated
+single_arm_farmer_carry,Single-Arm Farmer Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.27,,0.00,0.50,general,true,curated
+offset_farmer_carry,Offset Farmer Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+front_rack_carry,Front-Rack Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+double_front_rack_carry,Double Front-Rack Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+overhead_carry,Overhead Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_overhead_carry,Single-Arm Overhead Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.27,,0.00,0.50,general,true,curated
+waiter_s_carry,Waiter's Carry,isolation,dumbbell,weighted_reps,deep_core|obliques,abs|forearms|anterior_delts|lateral_delts,glutes|spinal_erectors,0.20,0.27,,0.05,0.50,general,true,curated
+neck_flexion,Neck Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+weighted_neck_flexion,Weighted Neck Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+harness_neck_flexion,Harness Neck Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_extension,Neck Extension,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+weighted_neck_extension,Weighted Neck Extension,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_harness_extension,Neck Harness Extension,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+lateral_neck_flexion,Lateral Neck Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+weighted_lateral_neck_flexion,Weighted Lateral Neck Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_rotation_with_band,Neck Rotation with Band,isolation,bodyweight,reps_only,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_rotation_with_cable,Neck Rotation with Cable,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+four_way_neck_machine_flexion,Four-Way Neck Machine Flexion,isolation,machine,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+four_way_neck_machine_extension,Four-Way Neck Machine Extension,isolation,machine,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+four_way_neck_machine_lateral_flexion,Four-Way Neck Machine Lateral Flexion,isolation,machine,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_isometric_flexion,Neck Isometric Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_isometric_extension,Neck Isometric Extension,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+neck_isometric_lateral_flexion,Neck Isometric Lateral Flexion,isolation,cable,weighted_reps,neck,traps,upper_back,0.16,0.18,,0.00,0.40,general,false,curated
+power_clean,Power Clean,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+hang_power_clean,Hang Power Clean,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+clean_pull,Clean Pull,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+high_pull,High Pull,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+snatch_grip_high_pull,Snatch-Grip High Pull,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+power_snatch,Power Snatch,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+hang_power_snatch,Hang Power Snatch,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+snatch_pull,Snatch Pull,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+muscle_snatch,Muscle Snatch,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+push_jerk,Push Jerk,vertical_press,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.88,0.78,,0.70,0.40,general,false,curated
+split_jerk,Split Jerk,vertical_press,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.88,0.78,,0.70,0.40,general,false,curated
+power_jerk,Power Jerk,vertical_press,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.88,0.78,,0.70,0.40,general,false,curated
+barbell_thruster,Barbell Thruster,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_thruster,Dumbbell Thruster,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+kettlebell_swing,Kettlebell Swing,hinge,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.72,0.72,,0.45,0.35,general,false,curated
+double_kettlebell_swing,Double-Kettlebell Swing,hinge,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.72,0.72,,0.45,0.35,general,false,curated
+kettlebell_clean,Kettlebell Clean,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+kettlebell_snatch,Kettlebell Snatch,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_clean,Dumbbell Clean,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_snatch,Dumbbell Snatch,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+trap_bar_jump,Trap-Bar Jump,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+barbell_jump_squat,Barbell Jump Squat,isolation,barbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+dumbbell_jump_squat,Dumbbell Jump Squat,isolation,dumbbell,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+sled_push,Sled Push,isolation,machine,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+heavy_sled_push,Heavy Sled Push,isolation,machine,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+sled_drag,Sled Drag,isolation,machine,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+backward_sled_drag,Backward Sled Drag,isolation,machine,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+heavy_sled_drag,Heavy Sled Drag,isolation,machine,weighted_reps,quads|glutes|hamstrings|traps,spinal_erectors|anterior_delts|lateral_delts|calves,core|forearms|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_selectorized_chest_press,Single-Arm Selectorized Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.03,0.52,general,true,curated
+single_arm_plate_loaded_chest_press,Single-Arm Plate-Loaded Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.03,0.52,general,true,curated
+single_arm_iso_lateral_chest_press,Single-Arm Iso-Lateral Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.03,0.52,general,true,curated
+single_arm_selectorized_incline_chest_press,Single-Arm Selectorized Incline Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.08,0.52,general,true,curated
+single_arm_plate_loaded_incline_chest_press,Single-Arm Plate-Loaded Incline Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.08,0.52,general,true,curated
+single_arm_iso_lateral_incline_chest_press,Single-Arm Iso-Lateral Incline Chest Press,horizontal_press,machine,weighted_reps,chest,triceps|anterior_delts,rotator_cuff|upper_back,0.56,0.45,,0.08,0.52,general,true,curated
+selectorized_low_row,Selectorized Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_selectorized_low_row,Single-Arm Selectorized Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+plate_loaded_low_row,Plate-Loaded Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_plate_loaded_low_row,Single-Arm Plate-Loaded Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+iso_lateral_low_row,Iso-Lateral Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_iso_lateral_low_row,Single-Arm Iso-Lateral Low Row,horizontal_pull,machine,weighted_reps,lats|upper_back,biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+selectorized_high_row,Selectorized High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_selectorized_high_row,Single-Arm Selectorized High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+plate_loaded_high_row,Plate-Loaded High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_plate_loaded_high_row,Single-Arm Plate-Loaded High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+iso_lateral_high_row,Iso-Lateral High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.47,,0.00,0.50,general,false,curated
+single_arm_iso_lateral_high_row,Single-Arm Iso-Lateral High Row,horizontal_pull,machine,weighted_reps,upper_back|posterior_delts,lats|biceps,forearms|rotator_cuff,0.52,0.50,,0.00,0.50,general,true,curated
+selectorized_shoulder_press,Selectorized Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps,upper_back|rotator_cuff,0.55,0.40,,0.18,0.50,general,false,curated
+single_arm_selectorized_shoulder_press,Single-Arm Selectorized Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps,upper_back|rotator_cuff,0.55,0.43,,0.13,0.50,general,true,curated
+single_arm_plate_loaded_shoulder_press,Single-Arm Plate-Loaded Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps,upper_back|rotator_cuff,0.55,0.43,,0.13,0.50,general,true,curated
+single_arm_iso_lateral_shoulder_press,Single-Arm Iso-Lateral Shoulder Press,vertical_press,machine,weighted_reps,lateral_delts|anterior_delts,triceps,upper_back|rotator_cuff,0.55,0.43,,0.13,0.50,general,true,curated
+selectorized_preacher_curl,Selectorized Preacher Curl,isolation,machine,weighted_reps,biceps,forearms,anterior_delts|lateral_delts|upper_back,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_selectorized_preacher_curl,Single-Arm Selectorized Preacher Curl,isolation,machine,weighted_reps,biceps,forearms,anterior_delts|lateral_delts|upper_back,0.22,0.29,,0.00,0.60,general,true,curated
+single_arm_plate_loaded_preacher_curl,Single-Arm Plate-Loaded Preacher Curl,isolation,machine,weighted_reps,biceps,forearms,anterior_delts|lateral_delts|upper_back,0.22,0.29,,0.00,0.60,general,true,curated
+iso_lateral_preacher_curl,Iso-Lateral Preacher Curl,isolation,machine,weighted_reps,biceps,forearms,anterior_delts|lateral_delts|upper_back,0.22,0.26,,0.05,0.60,general,false,curated
+single_arm_iso_lateral_preacher_curl,Single-Arm Iso-Lateral Preacher Curl,isolation,machine,weighted_reps,biceps,forearms,anterior_delts|lateral_delts|upper_back,0.22,0.29,,0.00,0.60,general,true,curated
+selectorized_triceps_extension,Selectorized Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_selectorized_triceps_extension,Single-Arm Selectorized Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.27,,0.00,0.50,general,true,curated
+plate_loaded_triceps_extension,Plate-Loaded Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_plate_loaded_triceps_extension,Single-Arm Plate-Loaded Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.27,,0.00,0.50,general,true,curated
+iso_lateral_triceps_extension,Iso-Lateral Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.24,,0.05,0.50,general,false,curated
+single_arm_iso_lateral_triceps_extension,Single-Arm Iso-Lateral Triceps Extension,isolation,machine,weighted_reps,triceps,,anterior_delts|lateral_delts|upper_back,0.20,0.27,,0.00,0.50,general,true,curated
+single_leg_selectorized_leg_extension,Single-Leg Selectorized Leg Extension,isolation,machine,weighted_reps,quads,,core,0.20,0.31,,0.00,0.55,general,true,curated
+single_leg_plate_loaded_leg_extension,Single-Leg Plate-Loaded Leg Extension,isolation,machine,weighted_reps,quads,,core,0.20,0.31,,0.00,0.55,general,true,curated
+iso_lateral_leg_extension,Iso-Lateral Leg Extension,isolation,machine,weighted_reps,quads,,core,0.20,0.28,,0.00,0.55,general,false,curated
+single_leg_iso_lateral_leg_extension,Single-Leg Iso-Lateral Leg Extension,isolation,machine,weighted_reps,quads,,core,0.20,0.31,,0.00,0.55,general,true,curated
+selectorized_seated_leg_curl,Selectorized Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.26,,0.00,0.65,general,false,curated
+single_leg_selectorized_seated_leg_curl,Single-Leg Selectorized Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.29,,0.00,0.65,general,true,curated
+plate_loaded_seated_leg_curl,Plate-Loaded Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.26,,0.00,0.65,general,false,curated
+single_leg_plate_loaded_seated_leg_curl,Single-Leg Plate-Loaded Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.29,,0.00,0.65,general,true,curated
+iso_lateral_seated_leg_curl,Iso-Lateral Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.26,,0.00,0.65,general,false,curated
+single_leg_iso_lateral_seated_leg_curl,Single-Leg Iso-Lateral Seated Leg Curl,isolation,machine,weighted_reps,hamstrings,calves,core,0.18,0.29,,0.00,0.65,general,true,curated
+selectorized_hip_thrust,Selectorized Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings,core,0.52,0.48,,0.18,0.58,general,false,curated
+single_leg_selectorized_hip_thrust,Single-Leg Selectorized Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings,core,0.52,0.51,,0.18,0.58,general,true,curated
+single_leg_plate_loaded_hip_thrust,Single-Leg Plate-Loaded Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings,core,0.52,0.51,,0.18,0.58,general,true,curated
+iso_lateral_hip_thrust,Iso-Lateral Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings,core,0.52,0.48,,0.18,0.58,general,false,curated
+single_leg_iso_lateral_hip_thrust,Single-Leg Iso-Lateral Hip Thrust,hinge,machine,weighted_reps,glutes,hamstrings,core,0.52,0.51,,0.18,0.58,general,true,curated

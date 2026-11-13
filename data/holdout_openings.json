@@ -1,0 +1,10 @@
+{
+  "openings": [
+    "2026-08-23T23:01:00.194937+00:00",
+    "2026-08-23T23:01:56.309442+00:00"
+  ],
+  "reasons": [
+    "L3.8 holdout run: the v0 engine, frozen after L3.7, evaluated once on days 520-729. Known limitations recorded in build_log/LIMITATIONS.md before the run.",
+    "L3.8 holdout run: the v0 engine, frozen after L3.7, evaluated once on days 520-729. Known limitations recorded in build_log/LIMITATIONS.md before the run."
+  ]
+}
